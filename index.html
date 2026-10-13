@@ -366,16 +366,36 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
 .spark-1{top:2%;right:8%}
 .spark-2{bottom:8%;left:2%}
 
+/* --- Hero banner image (Image 1) --- */
+.hero-banner{
+  margin-top:60px;
+  border-radius:var(--r-xl);
+  overflow:hidden;
+  box-shadow:var(--shadow-xl);
+  border:6px solid var(--white);
+  background:var(--white);
+  position:relative;
+  z-index:3;
+}
+.hero-banner img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:cover;
+}
+
 @media(max-width:960px){
   .hero{padding:20px 0 70px}
   .hero-grid{grid-template-columns:1fr;gap:60px}
   .hero-visual{min-height:480px;order:-1;max-width:520px;margin:0 auto;width:100%}
+  .hero-banner{margin-top:44px}
 }
 @media(max-width:520px){
   section{padding:70px 0}
   header.site-nav{top:8px;padding:0 14px}
   .hero-copy h1{letter-spacing:-1.8px}
   .hero-visual{min-height:380px}
+  .hero-banner{margin-top:28px;border-width:4px;border-radius:var(--r-lg)}
 }
 
 /* ============================================================
@@ -553,7 +573,7 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
 .hustle-body p{color:var(--ink-2);font-size:.9rem;flex:1;line-height:1.6}
 
 /* ============================================================
-   WHY CHOOSE
+   WHY CHOOSE — premium editorial photo cards
    ============================================================ */
 .why-section{
   background:var(--cream-2);
@@ -561,31 +581,87 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
   padding:0 0 110px;
 }
 .why-grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:24px;
+  position:relative;
+  z-index:2;
 }
 .why-card{
   background:var(--white);
-  border:1.5px solid var(--border-2);
+  border:1px solid var(--border-2);
   border-radius:var(--r-lg);
-  padding:34px 28px;
-  transition:all .35s cubic-bezier(.2,.9,.3,1);
-  position:relative;overflow:hidden;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition:all .4s cubic-bezier(.2,.9,.3,1);
+  box-shadow:0 4px 18px -8px rgba(23,24,41,.08);
+  position:relative;
 }
-.why-card:hover{transform:translateY(-8px) rotate(-.6deg);border-color:rgba(99,102,241,.4);box-shadow:0 30px 60px -20px rgba(23,24,41,.18)}
-.why-ico{
-  width:60px;height:60px;border-radius:18px;
-  display:grid;place-items:center;margin-bottom:22px;
-  position:relative;z-index:2;
-  box-shadow:var(--shadow-sm);
+.why-card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(99,102,241,.35);
+  box-shadow:0 34px 64px -24px rgba(23,24,41,.24);
 }
-.why-ico svg{width:28px;height:28px;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.why-card:nth-child(1) .why-ico{background:linear-gradient(135deg,#e0e7ff,#c7d2fe);color:var(--violet);stroke:var(--violet)}
-.why-card:nth-child(2) .why-ico{background:linear-gradient(135deg,#fce7f3,#fbcfe8);color:var(--pink);stroke:var(--pink)}
-.why-card:nth-child(3) .why-ico{background:linear-gradient(135deg,#fef3c7,#fde68a);color:var(--amber-2);stroke:var(--amber-2)}
-.why-card:nth-child(4) .why-ico{background:linear-gradient(135deg,#d1fae5,#a7f3d0);color:#059669;stroke:#059669}
-.why-ico svg{stroke:currentColor}
-.why-card h3{font-size:1.08rem;font-weight:800;margin-bottom:10px;letter-spacing:-.3px;position:relative;z-index:2}
-.why-card p{color:var(--ink-2);font-size:.9rem;line-height:1.65;position:relative;z-index:2}
+.why-media{
+  position:relative;
+  height:196px;
+  overflow:hidden;
+  background:#e5e0d5;
+  flex-shrink:0;
+}
+.why-media img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .9s cubic-bezier(.2,.9,.3,1);
+}
+.why-card:hover .why-media img{transform:scale(1.07)}
+.why-media::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(23,24,41,0) 45%, rgba(23,24,41,.45) 100%);
+  pointer-events:none;
+}
+.why-num{
+  position:absolute;top:16px;left:16px;z-index:2;
+  font-size:.68rem;font-weight:800;letter-spacing:1.6px;
+  padding:7px 14px;border-radius:var(--r-full);
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  color:var(--ink);
+  box-shadow:0 6px 18px -6px rgba(0,0,0,.25);
+}
+.why-body{
+  padding:26px 26px 30px;
+  display:flex;flex-direction:column;gap:10px;
+  flex:1;
+}
+.why-accent{
+  width:38px;height:3px;border-radius:2px;
+  background:linear-gradient(90deg,#6366f1,#8b5cf6);
+  margin-bottom:6px;
+}
+.why-card:nth-child(1) .why-accent{background:linear-gradient(90deg,#6366f1,#8b5cf6)}
+.why-card:nth-child(2) .why-accent{background:linear-gradient(90deg,#ec4899,#fb7185)}
+.why-card:nth-child(3) .why-accent{background:linear-gradient(90deg,#fbbf24,#f59e0b)}
+.why-card:nth-child(4) .why-accent{background:linear-gradient(90deg,#10b981,#34d399)}
+.why-body h3{
+  font-size:1.06rem;
+  font-weight:800;
+  letter-spacing:-.3px;
+  color:var(--ink);
+  line-height:1.3;
+}
+.why-body p{
+  color:var(--ink-2);
+  font-size:.92rem;
+  line-height:1.65;
+  margin:0;
+}
+
+@media(max-width:640px){
+  .why-media{height:170px}
+  .why-body{padding:22px 22px 26px}
+}
 
 /* ============================================================
    STORY
@@ -698,6 +774,7 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
   box-shadow:var(--shadow-xl);
   transform:rotate(-2deg);
   transition:transform .6s;
+  background:var(--white);
 }
 .preview-cover:hover{transform:rotate(0)}
 .preview-cover img{width:100%;height:100%;object-fit:cover}
@@ -874,15 +951,6 @@ footer::before{
 .footer-legal{display:flex;flex-wrap:wrap;gap:26px}
 .footer-legal a:hover{color:var(--amber)}
 
-.footer-disclaimer{
-  margin-top:28px;padding:22px 26px;border-radius:20px;
-  background:rgba(250,246,239,.04);
-  border:1px solid rgba(250,246,239,.08);
-  font-size:.8rem;color:rgba(250,246,239,.55);line-height:1.7;
-  position:relative;z-index:2;
-}
-.footer-disclaimer strong{color:rgba(250,246,239,.8)}
-
 @media(max-width:900px){
   .footer-grid{grid-template-columns:1fr 1fr;gap:38px}
   .footer-brand{grid-column:1/-1}
@@ -1054,6 +1122,18 @@ footer::before{
       </div>
 
     </div>
+
+    <!-- ============================================================
+         IMAGE 1 — HERO BANNER
+         Save the first attached image as: images/hero-banner.png
+         (or .jpg / .webp — match the extension to your file)
+         ============================================================ -->
+    <div class="hero-banner reveal">
+      <img src="images/hero-banner.png"
+           alt="Digital Growth Academy — Build Your Digital Future. Practical digital courses to help you learn, earn and grow at your own pace."
+           loading="lazy" />
+    </div>
+
   </div>
 </section>
 
@@ -1143,7 +1223,7 @@ footer::before{
 </section>
 
 <!-- ============================================================
-     WHY CHOOSE
+     WHY CHOOSE — premium editorial photo cards
      ============================================================ -->
 <section class="why-section" id="why">
   <div class="container">
@@ -1154,26 +1234,53 @@ footer::before{
     </div>
 
     <div class="why-grid">
-      <div class="why-card reveal">
-        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
-        <h3>Practical Business Resources</h3>
-        <p>Explore useful business concepts, frameworks, and examples.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></div>
-        <h3>Beginner-Friendly Learning</h3>
-        <p>Understand essential business ideas in clear, simple language.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20M2 12h20"/></svg></div>
-        <h3>Learn at Your Own Pace</h3>
-        <p>Study the material on your own schedule.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5z"/><path d="M12 22V12M3 7l9 5 9-5"/></svg></div>
-        <h3>Digital Business Knowledge</h3>
-        <p>Explore online business models, marketing, and productivity.</p>
-      </div>
+      <article class="why-card reveal">
+        <div class="why-media">
+          <span class="why-num">01</span>
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="Business planning workspace with notes, charts and a laptop" loading="lazy" />
+        </div>
+        <div class="why-body">
+          <span class="why-accent" aria-hidden="true"></span>
+          <h3>Practical Business Resources</h3>
+          <p>Explore useful business concepts, frameworks, and examples.</p>
+        </div>
+      </article>
+
+      <article class="why-card reveal">
+        <div class="why-media">
+          <span class="why-num">02</span>
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Person studying and learning on a laptop" loading="lazy" />
+        </div>
+        <div class="why-body">
+          <span class="why-accent" aria-hidden="true"></span>
+          <h3>Beginner-Friendly Learning</h3>
+          <p>Understand essential business ideas in clear, simple language.</p>
+        </div>
+      </article>
+
+      <article class="why-card reveal">
+        <div class="why-media">
+          <span class="why-num">03</span>
+          <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80" alt="Clean productivity workspace with laptop, notebook and coffee" loading="lazy" />
+        </div>
+        <div class="why-body">
+          <span class="why-accent" aria-hidden="true"></span>
+          <h3>Learn at Your Own Pace</h3>
+          <p>Study the material on your own schedule.</p>
+        </div>
+      </article>
+
+      <article class="why-card reveal">
+        <div class="why-media">
+          <span class="why-num">04</span>
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="Digital marketing analytics dashboard on a laptop screen" loading="lazy" />
+        </div>
+        <div class="why-body">
+          <span class="why-accent" aria-hidden="true"></span>
+          <h3>Digital Business Knowledge</h3>
+          <p>Explore online business models, marketing, and productivity.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -1249,7 +1356,12 @@ footer::before{
     <div class="preview-layout">
       <div class="preview-stack reveal">
         <div class="preview-cover">
-          <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1000&q=80" alt="Laptop, notebook and coffee on a desk" loading="lazy" />
+          <!-- ============================================================
+               IMAGE 2 — SAMPLE PREVIEW (replaces existing preview image)
+               Save the second attached image as: images/course-preview.png
+               (or .jpg / .webp — match the extension to your file)
+               ============================================================ -->
+          <img src="images/course-preview.png" alt="Digital Growth Academy course preview — modules, lessons and business resources" loading="lazy" />
           <span class="preview-badge">● Sample Preview</span>
           <div class="preview-title">
             <h3>Preview of This Course</h3>
@@ -1432,12 +1544,6 @@ footer::before{
       </div>
     </div>
 
-    <div class="footer-disclaimer">
-      <strong>Earnings disclaimer:</strong> Digital Growth Academy provides educational content
-      only. We do not guarantee any specific income, profit, or business result. Outcomes depend
-      entirely on your individual skills, effort, market conditions, and other factors outside
-      our control. Nothing on this website should be interpreted as financial or investment advice.
-    </div>
   </div>
 </footer>
 
@@ -1498,9 +1604,7 @@ const CONFIG = {
     { q:"What payment methods are available?",
       a:"Payment is completed securely through PayPal on the checkout page. If you run into any trouble with payment, contact us directly on WhatsApp and we'll help you." },
     { q:"Can I contact you before purchasing?",
-      a:"Absolutely. Tap any WhatsApp button on this page to reach us directly. We're happy to answer questions about the course content, structure, or pricing before you decide." },
-    { q:"Does this course guarantee online income?",
-      a:"<strong>No.</strong> This is an educational course. It does not guarantee any specific income, business result, or financial outcome. Results depend on your own effort, skills, market conditions, and many other factors outside our control. Please treat it as a learning resource, not an income promise." }
+      a:"Absolutely. Tap any WhatsApp button on this page to reach us directly. We're happy to answer questions about the course content, structure, or pricing before you decide." }
   ]
 };
 
