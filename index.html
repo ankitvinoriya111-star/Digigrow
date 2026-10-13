@@ -366,7 +366,7 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
 .spark-1{top:2%;right:8%}
 .spark-2{bottom:8%;left:2%}
 
-/* --- Hero banner image (Image 1) --- */
+/* --- Header banner image (header-image.png) --- */
 .hero-banner{
   margin-top:60px;
   border-radius:var(--r-xl);
@@ -1124,14 +1124,14 @@ footer::before{
     </div>
 
     <!-- ============================================================
-         IMAGE 1 — HERO BANNER
-         Save the first attached image as: images/hero-banner.png
-         (or .jpg / .webp — match the extension to your file)
+         HEADER IMAGE — header-image.png
+         File must be in the repo root (same folder as this HTML file).
          ============================================================ -->
     <div class="hero-banner reveal">
-      <img src="images/hero-banner.png"
-           alt="Digital Growth Academy — Build Your Digital Future. Practical digital courses to help you learn, earn and grow at your own pace."
-           loading="lazy" />
+      <img
+        src="./header-image.png"
+        alt="Digital Growth Academy — Build Your Digital Future. Practical digital courses to help you learn, earn and grow at your own pace."
+        loading="eager" />
     </div>
 
   </div>
@@ -1357,11 +1357,10 @@ footer::before{
       <div class="preview-stack reveal">
         <div class="preview-cover">
           <!-- ============================================================
-               IMAGE 2 — SAMPLE PREVIEW (replaces existing preview image)
-               Save the second attached image as: images/course-preview.png
-               (or .jpg / .webp — match the extension to your file)
+               SAMPLE PREVIEW IMAGE — sample-preview.png
+               File must be in the repo root (same folder as this HTML file).
                ============================================================ -->
-          <img src="images/course-preview.png" alt="Digital Growth Academy course preview — modules, lessons and business resources" loading="lazy" />
+          <img src="./sample-preview.png" alt="Digital Growth Academy course preview — modules, lessons and business resources" loading="lazy" />
           <span class="preview-badge">● Sample Preview</span>
           <div class="preview-title">
             <h3>Preview of This Course</h3>
