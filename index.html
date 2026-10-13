@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Digital Growth Academy — Learn Online Business, Side Hustles & Money Skills</title>
-<meta name="description" content="Self-paced digital courses on online business, side hustles, productivity and smart money habits. Honest, practical education with direct WhatsApp support." />
+<meta name="description" content="A self-paced digital business course on online business ideas, side hustles, productivity and smart money habits. Honest, practical education with direct WhatsApp support." />
 <meta name="theme-color" content="#faf6ef" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -333,7 +333,7 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
 .hero-trust .stars{color:var(--amber-2);letter-spacing:1px;font-size:1rem}
 .hero-trust b{color:var(--ink)}
 
-/* Hero visual — tilted photo cards + floating UI */
+/* Hero visual — tilted photo cards */
 .hero-visual{position:relative;min-height:560px;perspective:1400px}
 
 .hero-photo-main{
@@ -361,32 +361,6 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
 .hero-photo-secondary:hover{transform:rotate(0deg) translateY(-6px)}
 .hero-photo-secondary img{width:100%;height:100%;object-fit:cover}
 
-.hero-float{
-  position:absolute;
-  background:var(--white);
-  border-radius:16px;
-  padding:14px 18px;
-  box-shadow:var(--shadow-lg);
-  border:1.5px solid var(--border);
-  display:flex;align-items:center;gap:12px;
-  z-index:4;
-  animation:floaty 6s ease-in-out infinite;
-}
-.hero-float .hi{
-  width:42px;height:42px;border-radius:12px;
-  display:grid;place-items:center;font-size:1.2rem;
-  flex-shrink:0;
-}
-.hf-1{top:8%;left:-4%;animation-delay:.2s}
-.hf-1 .hi{background:linear-gradient(135deg,rgba(99,102,241,.15),rgba(139,92,246,.15));color:var(--violet)}
-.hf-2{top:44%;right:-6%;animation-delay:1s;flex-direction:column;align-items:flex-start;padding:16px 20px}
-.hf-2 small{color:var(--ink-3);font-size:.72rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:2px}
-.hf-2 b{font-size:1.4rem;font-weight:800;letter-spacing:-.5px;background:linear-gradient(100deg,#6366f1,#ec4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1}
-.hf-3{bottom:14%;right:6%;animation-delay:.6s}
-.hf-3 .hi{background:linear-gradient(135deg,rgba(37,211,102,.18),rgba(52,211,153,.18));color:#16a34a}
-.hero-float b{font-size:.88rem;font-weight:700;color:var(--ink)}
-.hero-float small.ds{color:var(--ink-3);font-size:.76rem;display:block}
-
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 
 .spark-1{top:2%;right:8%}
@@ -402,10 +376,6 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
   header.site-nav{top:8px;padding:0 14px}
   .hero-copy h1{letter-spacing:-1.8px}
   .hero-visual{min-height:380px}
-  .hero-float{padding:11px 15px}
-  .hero-float .hi{width:36px;height:36px;font-size:1rem}
-  .hf-2{padding:12px 16px}
-  .hf-2 b{font-size:1.15rem}
 }
 
 /* ============================================================
@@ -438,65 +408,105 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
 @media(max-width:700px){.trust-strip-inner{padding:22px 26px;justify-content:center}}
 
 /* ============================================================
-   COURSES
+   OFFER BLOCK
    ============================================================ */
 #courses{padding-top:80px}
-.course-grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px;
-}
-.course-card{
+
+.offer-card{
+  position:relative;
+  max-width:920px;margin:0 auto;
   background:var(--white);
   border:1.5px solid var(--border-2);
   border-radius:var(--r-xl);
+  padding:56px 48px;
+  text-align:center;
+  box-shadow:var(--shadow-lg);
   overflow:hidden;
-  display:flex;flex-direction:column;
-  transition:all .4s cubic-bezier(.2,.9,.3,1);
-  position:relative;
 }
-.course-card:hover{
-  transform:translateY(-10px) rotate(-.5deg);
-  border-color:rgba(99,102,241,.4);
-  box-shadow:0 40px 80px -24px rgba(23,24,41,.22);
+.offer-card::before{
+  content:"";position:absolute;top:-40%;right:-10%;width:55%;height:180%;
+  background:radial-gradient(circle, rgba(139,92,246,.16), transparent 62%);
+  pointer-events:none;
 }
-.course-media{
-  position:relative;height:220px;overflow:hidden;background:#e5e0d5;
+.offer-card::after{
+  content:"";position:absolute;bottom:-45%;left:-10%;width:55%;height:180%;
+  background:radial-gradient(circle, rgba(251,191,36,.18), transparent 62%);
+  pointer-events:none;
 }
-.course-media img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.9,.3,1)}
-.course-card:hover .course-media img{transform:scale(1.08)}
-.course-tag{
-  position:absolute;top:16px;left:16px;z-index:2;
-  font-size:.7rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;
-  padding:7px 14px;border-radius:var(--r-full);
-  background:var(--white);color:var(--ink);
-  box-shadow:var(--shadow-sm);
-}
-.course-tag.hot{background:linear-gradient(135deg,#fbbf24,#f59e0b);color:#1a1a1a}
-.course-tag.new{background:linear-gradient(135deg,#10b981,#059669);color:#fff}
+.offer-card > *{position:relative;z-index:2}
 
-.course-body{padding:26px 26px 28px;display:flex;flex-direction:column;flex:1;gap:14px}
-.course-body h3{font-size:1.3rem;font-weight:800;letter-spacing:-.5px;line-height:1.25}
-.course-body > p{color:var(--ink-2);font-size:.94rem;flex:1;line-height:1.6}
-
-.course-meta{display:flex;flex-wrap:wrap;gap:8px}
-.chip{
-  font-size:.72rem;font-weight:700;padding:6px 13px;border-radius:var(--r-full);
-  background:var(--cream);border:1.5px solid var(--border);color:var(--ink-2);
+.offer-label{
+  display:inline-block;
+  font-size:.7rem;font-weight:800;letter-spacing:2.4px;
+  text-transform:uppercase;
+  padding:9px 20px;border-radius:var(--r-full);
+  background:linear-gradient(135deg,#fef3c7,#fde68a);
+  border:1.5px solid rgba(245,158,11,.35);
+  color:#92400e;
+  margin-bottom:24px;
+  box-shadow:var(--shadow-xs);
 }
-.chip.vi{background:rgba(99,102,241,.1);border-color:rgba(99,102,241,.22);color:var(--violet)}
-.chip.mint{background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.22);color:#059669}
-.chip.amber{background:rgba(251,191,36,.14);border-color:rgba(251,191,36,.3);color:var(--amber-2)}
-
-.course-footer{
-  display:flex;align-items:center;justify-content:space-between;gap:14px;
-  margin-top:6px;padding-top:20px;border-top:1.5px dashed var(--border-2);
+.offer-title{
+  font-size:clamp(1.6rem,3.6vw,2.5rem);
+  font-weight:800;letter-spacing:-1.4px;line-height:1.12;
+  margin-bottom:30px;color:var(--ink);
 }
-.price{font-size:1.5rem;font-weight:800;letter-spacing:-.8px;color:var(--ink)}
-.price-note{font-size:.72rem;color:var(--ink-3);font-weight:600;display:block;margin-top:2px}
-.course-actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
-.course-actions .btn{flex:1;min-width:0}
+.offer-title .serif{
+  font-family:var(--ff-serif);font-style:italic;font-weight:500;
+  color:var(--violet);letter-spacing:-.8px;
+}
+.offer-price-row{
+  display:flex;align-items:center;justify-content:center;
+  gap:20px;flex-wrap:wrap;margin-bottom:18px;
+}
+.offer-old{
+  font-size:1.5rem;font-weight:700;color:var(--ink-3);
+  text-decoration:line-through;text-decoration-thickness:2px;
+}
+.offer-new{
+  font-size:clamp(3rem,7vw,4rem);font-weight:800;letter-spacing:-2.5px;line-height:1;
+  background:linear-gradient(100deg,#6366f1 0%,#ec4899 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.offer-off{
+  font-size:.78rem;font-weight:800;letter-spacing:1.2px;
+  padding:9px 17px;border-radius:var(--r-full);
+  background:linear-gradient(135deg,#10b981,#059669);
+  color:#fff;
+  box-shadow:0 8px 20px -6px rgba(16,185,129,.5);
+}
+.offer-line{
+  color:var(--ink-2);font-size:1.02rem;font-weight:600;
+  margin-bottom:24px;
+}
+.offer-benefits{
+  display:inline-block;
+  font-size:.86rem;font-weight:700;color:var(--ink-2);
+  background:var(--cream);
+  border:1.5px dashed var(--border-2);
+  padding:13px 26px;border-radius:var(--r-full);
+  margin-bottom:32px;
+  line-height:1.5;
+}
+.offer-actions{
+  display:flex;gap:14px;justify-content:center;flex-wrap:wrap;
+  margin-bottom:22px;
+}
+.offer-actions .btn{padding:18px 34px;font-size:1rem}
+.offer-support{
+  font-size:.86rem;color:var(--ink-3);font-weight:500;
+  max-width:540px;margin:0 auto;line-height:1.65;
+}
+.offer-section-bottom{padding:0 0 100px}
+
+@media(max-width:600px){
+  .offer-card{padding:38px 22px;border-radius:26px}
+  .offer-benefits{font-size:.8rem;padding:12px 18px}
+  .offer-actions .btn{width:100%;padding:16px 22px;font-size:.93rem}
+}
 
 /* ============================================================
-   SIDE HUSTLES
+   SIDE HUSTLES / WHAT WE PROVIDE
    ============================================================ */
 .hustle-section{
   background:var(--cream-2);
@@ -541,22 +551,6 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
 .hustle-body{padding:38px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
 .hustle-body h3{font-size:1.1rem;font-weight:800;letter-spacing:-.3px}
 .hustle-body p{color:var(--ink-2);font-size:.9rem;flex:1;line-height:1.6}
-.hustle-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:8px;padding-top:16px;border-top:1.5px dashed var(--border-2)}
-.hustle-cost{font-size:.75rem;font-weight:700;color:var(--ink-3);background:var(--cream);padding:5px 11px;border-radius:var(--r-full);border:1px solid var(--border)}
-.hustle-link{font-size:.85rem;font-weight:700;color:var(--violet);display:inline-flex;align-items:center;gap:6px;transition:gap .2s}
-.hustle-link:hover{gap:10px}
-
-.disclaimer{
-  margin-top:44px;padding:22px 26px;border-radius:var(--r-lg);
-  background:rgba(251,191,36,.12);
-  border:1.5px solid rgba(251,191,36,.35);
-  font-size:.9rem;color:#92400e;
-  display:flex;gap:14px;align-items:flex-start;
-  position:relative;z-index:2;
-  line-height:1.65;
-}
-.disclaimer svg{width:22px;height:22px;fill:var(--amber-2);flex-shrink:0;margin-top:2px}
-.disclaimer strong{color:#78350f}
 
 /* ============================================================
    WHY CHOOSE
@@ -619,23 +613,6 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
   opacity:.22;
   transform:rotate(6deg);
 }
-.story-sticker{
-  position:absolute;left:-26px;bottom:34px;z-index:3;
-  background:var(--white);
-  border-radius:20px;padding:16px 22px;
-  display:flex;align-items:center;gap:14px;
-  box-shadow:var(--shadow-lg);
-  border:1.5px solid var(--border);
-  animation:floaty 6s ease-in-out infinite;
-  transform:rotate(-3deg);
-}
-.story-sticker .si{
-  width:48px;height:48px;border-radius:14px;
-  background:linear-gradient(135deg,#d1fae5,#a7f3d0);
-  display:grid;place-items:center;font-size:1.35rem;
-}
-.story-sticker b{display:block;font-size:.95rem;font-weight:800;letter-spacing:-.2px}
-.story-sticker small{color:var(--ink-3);font-size:.78rem;font-weight:600}
 
 .story-content h2{
   font-size:clamp(1.9rem,4vw,2.9rem);
@@ -655,7 +632,6 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
 @media(max-width:900px){
   .story-grid{grid-template-columns:1fr;gap:50px}
   .story-visual{max-width:420px}
-  .story-sticker{left:0}
 }
 
 /* ============================================================
@@ -739,7 +715,7 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
 }
 .preview-title{position:absolute;left:30px;right:30px;bottom:28px;z-index:2;color:#fff}
 .preview-title h3{font-size:1.4rem;font-weight:800;letter-spacing:-.5px;margin-bottom:6px}
-.preview-title small{color:rgba(255,255,255,.8);font-size:.86rem;font-weight:500}
+.preview-title small{color:rgba(255,255,255,.8);font-size:.86rem;font-weight:500;line-height:1.5;display:block}
 
 .preview-content h2{
   font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;
@@ -748,16 +724,7 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
 .preview-content h2 .serif{font-family:var(--ff-serif);font-style:italic;font-weight:500;color:var(--violet);letter-spacing:-.8px}
 .preview-content > p{color:var(--ink-2);margin-bottom:26px;font-size:1.02rem;line-height:1.7}
 
-.resource-note{
-  display:flex;gap:14px;align-items:flex-start;
-  background:rgba(99,102,241,.07);
-  border:1.5px solid rgba(99,102,241,.2);
-  border-radius:16px;padding:18px 22px;margin-bottom:28px;
-  font-size:.88rem;color:var(--violet);line-height:1.6;font-weight:500;
-}
-.resource-note svg{width:20px;height:20px;fill:var(--violet);flex-shrink:0;margin-top:2px}
-
-.lesson-list{display:flex;flex-direction:column;gap:12px;margin-bottom:30px}
+.lesson-list{display:flex;flex-direction:column;gap:12px;margin-bottom:10px}
 .lesson{
   display:flex;align-items:center;gap:16px;
   background:var(--white);border:1.5px solid var(--border-2);border-radius:16px;
@@ -775,7 +742,6 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
 .lesson:nth-child(4) .lesson-num{background:linear-gradient(135deg,#d1fae5,#a7f3d0);color:#059669}
 .lesson-txt{flex:1}
 .lesson-txt b{display:block;font-size:.92rem;font-weight:700;color:var(--ink)}
-.lesson-txt small{color:var(--ink-3);font-size:.76rem;font-weight:500}
 .lesson .arrow{color:var(--ink-3);font-size:.9rem;transition:all .2s;font-weight:700}
 .lesson:hover .arrow{transform:translateX(4px);color:var(--violet)}
 
@@ -981,8 +947,8 @@ footer::before{
 
       <nav class="nav-links" aria-label="Primary">
         <a href="#top">Home</a>
-        <a href="#courses">Courses</a>
-        <a href="#side-hustles">Side Hustle Ideas</a>
+        <a href="#courses">Course</a>
+        <a href="#side-hustles">What's Included</a>
         <a href="#why">Why Choose Us</a>
         <a href="#faqs">FAQs</a>
       </nav>
@@ -992,17 +958,17 @@ footer::before{
           <svg width="15" height="15" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           WhatsApp
         </a>
-        <a class="btn btn-primary btn-sm" href="#courses">Explore Courses</a>
+        <a class="btn btn-primary btn-sm" href="#courses">Explore Course</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
       </div>
     </div>
 
     <div class="mobile-menu" id="mobileMenu">
       <a href="#top">Home</a>
-      <a href="#courses">Courses</a>
-      <a href="#side-hustles">Side Hustle Ideas</a>
+      <a href="#courses">Course</a>
+      <a href="#side-hustles">What's Included</a>
       <a href="#why">Why Choose Us</a>
-      <a href="#journey">Learning Journey</a>
+      <a href="#journey">How to Access</a>
       <a href="#faqs">FAQs</a>
       <a href="#" data-wa-link>💬 Chat on WhatsApp</a>
     </div>
@@ -1036,7 +1002,7 @@ footer::before{
       <div class="hero-copy reveal">
         <div class="hero-kicker">
           <span class="kico" aria-hidden="true">✨</span>
-          New courses now available
+          New course now available
         </div>
 
         <h1>
@@ -1045,8 +1011,9 @@ footer::before{
         </h1>
 
         <p class="lede">
-          Explore digital courses covering online business ideas, side hustles, smart money
-          habits, and productivity strategies — designed to help you take your next step.
+          Explore a digital business course covering online business ideas, side hustles,
+          smart money habits, and productivity strategies — designed to help you take your
+          next step.
         </p>
 
         <div class="hero-badges">
@@ -1056,7 +1023,7 @@ footer::before{
         </div>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#courses">Explore Courses →</a>
+          <a class="btn btn-primary" href="#courses">Explore Course →</a>
           <a class="btn btn-wa" data-wa-link href="#">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Chat on WhatsApp
@@ -1083,27 +1050,6 @@ footer::before{
         </div>
         <div class="hero-photo-secondary">
           <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80" alt="Financial planning notes and calculator" loading="eager" />
-        </div>
-
-        <div class="hero-float hf-1">
-          <span class="hi" aria-hidden="true">📚</span>
-          <div>
-            <b>3 Course Tracks</b>
-            <small class="ds">Self-paced</small>
-          </div>
-        </div>
-
-        <div class="hero-float hf-2">
-          <small>Starting at</small>
-          <b>₹99</b>
-        </div>
-
-        <div class="hero-float hf-3">
-          <span class="hi" aria-hidden="true">✓</span>
-          <div>
-            <b>Beginner Friendly</b>
-            <small class="ds">No experience needed</small>
-          </div>
         </div>
       </div>
 
@@ -1138,43 +1084,61 @@ footer::before{
 </div>
 
 <!-- ============================================================
-     COURSES
+     COURSE + TOP OFFER BLOCK
      ============================================================ -->
 <section id="courses">
   <div class="container">
     <div class="sec-head reveal">
-      <span class="eyebrow vi">🎓 Course Collection</span>
+      <span class="eyebrow vi">🎓 The Course</span>
       <h2>Discover Your Next <span class="serif">Digital Opportunity</span></h2>
-      <p>Three focused course tracks built around real, practical skills for the digital economy.</p>
+      <p>This focused course brings together practical business knowledge, digital entrepreneurship ideas, and strategies for smarter time and money management.</p>
     </div>
 
-    <div class="course-grid" id="courseGrid"></div>
+    <div class="offer-card reveal" id="offer">
+      <span class="offer-label">Golden Opportunity · Special Offer</span>
+
+      <h3 class="offer-title">Your Digital Business Learning Toolkit — <span class="serif">One Special Price</span></h3>
+
+      <div class="offer-price-row">
+        <span class="offer-old">$197</span>
+        <span class="offer-new">$27</span>
+        <span class="offer-off">86% OFF</span>
+      </div>
+
+      <p class="offer-line">This is a special offer for you. Don't miss the deal!</p>
+
+      <p class="offer-benefits">Lifetime Access · Offline Anytime, Anywhere · Easy Access on Your Devices</p>
+
+      <div class="offer-actions">
+        <a class="btn btn-primary"
+           href="https://www.paypal.com/ncp/payment/C9V26D7LHUXPA"
+           target="_blank" rel="noopener noreferrer">Buy Now — Get Instant Access →</a>
+        <a class="btn btn-wa" data-wa-link href="#"
+           data-wa-msg="Hi, I need help with payment or accessing the course.">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+
+      <p class="offer-support">Having trouble with payment or accessing your course? Contact us directly on WhatsApp, and we'll help you.</p>
+    </div>
   </div>
 </section>
 
 <!-- ============================================================
-     SIDE HUSTLES
+     WHAT WE PROVIDE
      ============================================================ -->
 <section class="hustle-section" id="side-hustles">
   <div class="blob hustle-blob"></div>
 
   <div class="container">
     <div class="sec-head reveal">
-      <span class="eyebrow amber">💡 Idea Explorer</span>
-      <h2>Explore Business Ideas for the <span class="serif">Digital Age</span></h2>
-      <p>Starting points to research, learn from, and evaluate against your own skills and interests.</p>
+      <span class="eyebrow amber">💡 What We Provide</span>
+      <h2>Explore What's Included in <span class="serif">This Course</span></h2>
+      <p>Discover business ideas, side-hustle concepts, and digital business resources included in this complete course.</p>
     </div>
 
     <div class="hustle-grid" id="hustleGrid"></div>
-
-    <div class="disclaimer reveal" role="note">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 1 21h22L12 2zm0 6 6.5 11h-13L12 8zm-1 3v4h2v-4h-2zm0 5v2h2v-2h-2z"/></svg>
-      <span>
-        <strong>Important:</strong> Costs, difficulty, and earning potential vary widely by
-        individual skills, market demand, effort, and timing. These are educational starting
-        points, not income guarantees. Always do your own research before investing time or money.
-      </span>
-    </div>
   </div>
 </section>
 
@@ -1185,30 +1149,30 @@ footer::before{
   <div class="container">
     <div class="sec-head reveal">
       <span class="eyebrow mint">✓ Why Choose Us</span>
-      <h2>Built for Practical, <span class="serif">Self-Paced Learning</span></h2>
-      <p>What you can genuinely expect from our courses — no inflated promises.</p>
+      <h2>Practical Knowledge for Your <span class="serif">Digital Business Journey</span></h2>
+      <p>What you can genuinely expect from this course — no inflated promises.</p>
     </div>
 
     <div class="why-grid">
       <div class="why-card reveal">
         <div class="why-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
-        <h3>Practical Learning Resources</h3>
-        <p>Lesson content focused on real concepts, frameworks, and examples you can study and apply.</p>
+        <h3>Practical Business Resources</h3>
+        <p>Explore useful business concepts, frameworks, and examples.</p>
       </div>
       <div class="why-card reveal">
         <div class="why-ico"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></div>
-        <h3>Beginner-Friendly Explanations</h3>
-        <p>Concepts broken down in plain language, without assuming prior business experience.</p>
+        <h3>Beginner-Friendly Learning</h3>
+        <p>Understand essential business ideas in clear, simple language.</p>
       </div>
       <div class="why-card reveal">
         <div class="why-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20M2 12h20"/></svg></div>
-        <h3>Flexible Self-Paced Learning</h3>
-        <p>Study on your own schedule and move through the material at the speed that works for you.</p>
+        <h3>Learn at Your Own Pace</h3>
+        <p>Study the material on your own schedule.</p>
       </div>
       <div class="why-card reveal">
         <div class="why-ico"><svg viewBox="0 0 24 24" fill="none"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5z"/><path d="M12 22V12M3 7l9 5 9-5"/></svg></div>
         <h3>Digital Business Knowledge</h3>
-        <p>An overview of digital business models, tools, and approaches used across the online economy.</p>
+        <p>Explore online business models, marketing, and productivity.</p>
       </div>
     </div>
   </div>
@@ -1225,13 +1189,6 @@ footer::before{
         <div class="story-img">
           <img src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1000&q=80" alt="Entrepreneur reviewing notes and planning" loading="lazy" />
         </div>
-        <div class="story-sticker">
-          <span class="si" aria-hidden="true">🎯</span>
-          <div>
-            <b>Learn at your own pace</b>
-            <small>Study when it fits your schedule</small>
-          </div>
-        </div>
       </div>
 
       <div class="story-content reveal">
@@ -1247,38 +1204,38 @@ footer::before{
           <li><span class="check" aria-hidden="true">✓</span> Evaluate side hustle ideas against your own situation</li>
           <li><span class="check" aria-hidden="true">✓</span> Build smarter habits around time, focus, and money</li>
         </ul>
-        <a class="btn btn-primary" href="#courses">Find Your Course →</a>
+        <a class="btn btn-primary" href="#side-hustles">Explore What We Provide →</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-     JOURNEY
+     HOW TO ACCESS YOUR COURSE
      ============================================================ -->
 <section class="journey-section" id="journey">
   <div class="container">
     <div class="sec-head reveal">
-      <span class="eyebrow">📚 Learning Journey</span>
-      <h2>Three Steps, <span class="serif">Your Own Pace</span></h2>
-      <p>A simple path from choosing a topic to applying what you learn.</p>
+      <span class="eyebrow">📚 Course Access</span>
+      <h2>How to Access <span class="serif">Your Course</span></h2>
+      <p>Get started in three simple steps.</p>
     </div>
 
     <div class="journey-grid">
       <div class="journey-step reveal">
         <div class="journey-num">1</div>
-        <h3>Choose Your Course</h3>
-        <p>Find a topic that matches your goals, interests, and available time.</p>
+        <h3>Click Buy Now or Enroll</h3>
+        <p>Open the secure payment page to purchase the course.</p>
       </div>
       <div class="journey-step reveal">
         <div class="journey-num">2</div>
-        <h3>Learn at Your Own Pace</h3>
-        <p>Study the available lessons and resources whenever it suits you.</p>
+        <h3>Complete Your Payment</h3>
+        <p>Follow the instructions to complete your purchase securely through PayPal.</p>
       </div>
       <div class="journey-step reveal">
         <div class="journey-num">3</div>
-        <h3>Apply What You Learn</h3>
-        <p>Use your knowledge to explore practical opportunities with realistic expectations.</p>
+        <h3>Download and Access Your Course</h3>
+        <p>Access your course materials using the delivery instructions provided after purchase.</p>
       </div>
     </div>
   </div>
@@ -1295,8 +1252,8 @@ footer::before{
           <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1000&q=80" alt="Laptop, notebook and coffee on a desk" loading="lazy" />
           <span class="preview-badge">● Sample Preview</span>
           <div class="preview-title">
-            <h3>Make Money Online — Course Preview</h3>
-            <small>Digital business models &amp; online income paths</small>
+            <h3>Preview of This Course</h3>
+            <small>Explore the business topics, digital opportunities, and learning resources included in this course.</small>
           </div>
         </div>
       </div>
@@ -1305,39 +1262,32 @@ footer::before{
         <span class="eyebrow vi">🔍 Inside the Course</span>
         <h2>A Look at What <span class="serif">You'll Be Learning</span></h2>
         <p>
-          Each course is structured into short, focused lessons so you can move through the
+          This course is structured into short, focused lessons so you can move through the
           material without feeling overwhelmed.
         </p>
-
-        <div class="resource-note">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg>
-          <span>Downloadable resource availability varies by course. Confirmed resource lists are shown on each individual course page at checkout.</span>
-        </div>
 
         <div class="lesson-list">
           <div class="lesson">
             <span class="lesson-num">01</span>
-            <div class="lesson-txt"><b>Understanding Online Business Models</b><small>Lesson preview</small></div>
+            <div class="lesson-txt"><b>Understanding Online Business Models</b></div>
             <span class="arrow" aria-hidden="true">→</span>
           </div>
           <div class="lesson">
             <span class="lesson-num">02</span>
-            <div class="lesson-txt"><b>Evaluating Side Hustle Opportunities</b><small>Lesson preview</small></div>
+            <div class="lesson-txt"><b>Evaluating Side Hustle Opportunities</b></div>
             <span class="arrow" aria-hidden="true">→</span>
           </div>
           <div class="lesson">
             <span class="lesson-num">03</span>
-            <div class="lesson-txt"><b>Time Management &amp; Focus Systems</b><small>Lesson preview</small></div>
+            <div class="lesson-txt"><b>Time Management &amp; Focus Systems</b></div>
             <span class="arrow" aria-hidden="true">→</span>
           </div>
           <div class="lesson">
             <span class="lesson-num">04</span>
-            <div class="lesson-txt"><b>Budgeting &amp; Money Fundamentals</b><small>Lesson preview</small></div>
+            <div class="lesson-txt"><b>Budgeting &amp; Money Fundamentals</b></div>
             <span class="arrow" aria-hidden="true">→</span>
           </div>
         </div>
-
-        <a class="btn btn-primary" href="#courses">Enroll Now →</a>
       </div>
     </div>
   </div>
@@ -1367,15 +1317,51 @@ footer::before{
       <div class="cta-inner">
         <div class="cta-emoji" aria-hidden="true">🚀</div>
         <h2>Ready to Start <span class="serif">Learning?</span></h2>
-        <p>Pick a course, learn at your own pace, and reach out anytime on WhatsApp with questions before or after you enroll.</p>
+        <p>Choose your next step, learn at your own pace, and contact us on WhatsApp if you need help before or after purchasing.</p>
         <div class="actions">
-          <a class="btn btn-primary" href="#courses">Explore Courses →</a>
+          <a class="btn btn-primary" href="#courses">Explore Course →</a>
           <a class="btn btn-wa" data-wa-link href="#">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Chat With Us
           </a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BOTTOM OFFER BLOCK
+     ============================================================ -->
+<section class="offer-section-bottom" id="offer-bottom">
+  <div class="container">
+    <div class="offer-card reveal">
+      <span class="offer-label">Golden Opportunity · Special Offer</span>
+
+      <h3 class="offer-title">Your Digital Business Learning Toolkit — <span class="serif">One Special Price</span></h3>
+
+      <div class="offer-price-row">
+        <span class="offer-old">$197</span>
+        <span class="offer-new">$27</span>
+        <span class="offer-off">86% OFF</span>
+      </div>
+
+      <p class="offer-line">This is a special offer for you. Don't miss the deal!</p>
+
+      <p class="offer-benefits">Lifetime Access · Offline Anytime, Anywhere · Easy Access on Your Devices</p>
+
+      <div class="offer-actions">
+        <a class="btn btn-primary"
+           href="https://www.paypal.com/ncp/payment/C9V26D7LHUXPA"
+           target="_blank" rel="noopener noreferrer">Buy Now — Get Instant Access →</a>
+        <a class="btn btn-wa" data-wa-link href="#"
+           data-wa-msg="Hi, I have an issue with payment or the course. Please help.">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+
+      <p class="offer-support">Any issue with payment or the course? Contact us on WhatsApp.</p>
     </div>
   </div>
 </section>
@@ -1397,8 +1383,8 @@ footer::before{
           Digital Growth<span class="vi">&nbsp;Academy</span>
         </a>
         <p>
-          Digital courses on online business models, side hustle ideas, productivity,
-          and smart money habits — designed for self-paced, practical learning.
+          A digital business course covering online business models, side hustle ideas,
+          productivity, and smart money habits — designed for self-paced, practical learning.
         </p>
         <a class="footer-wa" data-wa-link href="#">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -1410,19 +1396,19 @@ footer::before{
         <h4>Quick Links</h4>
         <ul>
           <li><a href="#top">Home</a></li>
-          <li><a href="#courses">Courses</a></li>
-          <li><a href="#side-hustles">Side Hustle Ideas</a></li>
+          <li><a href="#courses">Course</a></li>
+          <li><a href="#side-hustles">What's Included</a></li>
           <li><a href="#why">Why Choose Us</a></li>
           <li><a href="#faqs">FAQs</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>Courses</h4>
+        <h4>Course</h4>
         <ul>
-          <li><a href="#courses">Make Money Online</a></li>
-          <li><a href="#courses">Top Side Hustle Businesses</a></li>
-          <li><a href="#courses">Time &amp; Money Secrets</a></li>
+          <li><a href="#courses">Explore the Course</a></li>
+          <li><a href="#side-hustles">What's Included</a></li>
+          <li><a href="#journey">How to Access</a></li>
         </ul>
       </div>
 
@@ -1477,81 +1463,44 @@ const CONFIG = {
      Until replaced, the WhatsApp buttons will NOT reach a chat. */
   WHATSAPP_NUMBER: "91945277258",   // ← replace with verified number
 
-  WHATSAPP_MESSAGE: "Hello, I'm interested in your digital courses. Please share the course details and pricing.",
+  WHATSAPP_MESSAGE: "Hello, I'm interested in your digital business course. Please share the course details and pricing.",
 
-  courses: [
-    {
-      id:"mmo", tag:"Best Seller", tagClass:"hot",
-      title:"Make Money Online",
-      description:"Learn about online business models, digital products, freelancing, content creation, and potential online income opportunities.",
-      image:"https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80",
-      imageAlt:"Laptop, notebook and workspace on a desk",
-      price:"₹—", priceNote:"One-time payment",
-      chips:[{t:"Self-paced",c:"vi"},{t:"Beginner friendly",c:""}],
-      ctaText:"Explore This Course", checkoutUrl:"#"
-    },
-    {
-      id:"hustle", tag:"Popular", tagClass:"",
-      title:"Top Side Hustle Businesses",
-      description:"Explore side hustle ideas, low-cost business models, digital services, and practical ways to start building valuable skills.",
-      image:"https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
-      imageAlt:"Two people collaborating on laptops",
-      price:"₹—", priceNote:"One-time payment",
-      chips:[{t:"Idea library",c:"mint"},{t:"Practical",c:""}],
-      ctaText:"Discover Side Hustles", checkoutUrl:"#"
-    },
-    {
-      id:"time", tag:"New", tagClass:"new",
-      title:"Time & Money Secrets",
-      description:"Discover productivity techniques, time management strategies, budgeting fundamentals, and smarter approaches to managing money.",
-      image:"https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=900&q=80",
-      imageAlt:"Planning calendar, notebook and coffee on a desk",
-      price:"₹—", priceNote:"One-time payment",
-      chips:[{t:"Productivity",c:"vi"},{t:"Money basics",c:""}],
-      ctaText:"Explore Strategies", checkoutUrl:"#"
-    }
-  ],
+  PAYPAL_URL: "https://www.paypal.com/ncp/payment/C9V26D7LHUXPA",
 
   hustles: [
     { icon:"🧑‍💻", title:"Freelancing",
       text:"Offer a specific skill — writing, design, development, or admin — to clients on a project or retainer basis.",
-      cost:"Low start cost",
       image:"https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" },
     { icon:"📦", title:"Selling Digital Products",
       text:"Create and sell templates, guides, printables, or other digital assets that can be delivered instantly.",
-      cost:"Low start cost",
       image:"https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80" },
     { icon:"🔗", title:"Affiliate Marketing",
       text:"Recommend products or services you genuinely use and earn a commission on qualifying sales.",
-      cost:"Low start cost",
       image:"https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80" },
     { icon:"🎬", title:"Content Creation",
       text:"Build an audience around a topic you know well through video, writing, or social platforms.",
-      cost:"Varies by format",
       image:"https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=800&q=80" },
     { icon:"🎓", title:"Online Tutoring",
       text:"Teach a subject or skill you already know through one-on-one or group sessions online.",
-      cost:"Low start cost",
       image:"https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" },
     { icon:"📱", title:"Social Media Management",
       text:"Help small businesses plan, create, and schedule their social media content.",
-      cost:"Low start cost",
       image:"https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&w=800&q=80" }
   ],
 
   faqs: [
-    { q:"What topics do your courses cover?",
-      a:"Our courses focus on three main areas: <strong>making money online</strong> (business models, digital products, freelancing, content), <strong>side hustle businesses</strong> (idea exploration and low-cost models), and <strong>time &amp; money management</strong> (productivity, budgeting, and money fundamentals)." },
-    { q:"Are these courses suitable for beginners?",
-      a:"Yes. The courses are written with beginners in mind and explain concepts in plain language without assuming prior business experience. If you already have experience, some sections may feel like a refresher." },
-    { q:"How do I access a course after purchasing?",
+    { q:"What topics does this course cover?",
+      a:"This course covers online business ideas, side-hustle opportunities, Shopify fundamentals, digital marketing, business planning, productivity, and time and money management." },
+    { q:"Is this course suitable for beginners?",
+      a:"Yes. The course is written with beginners in mind and explains concepts in plain language without assuming prior business experience. If you already have experience, some sections may feel like a refresher." },
+    { q:"How do I access the course after purchasing?",
       a:"After your purchase is confirmed, we share the course access details directly with you on WhatsApp. Full access instructions are provided at that point." },
     { q:"What payment methods are available?",
-      a:"Payment is currently arranged directly through WhatsApp. Available methods will be confirmed with you at the time of purchase. A secure checkout integration may be added in the future — details will be updated here when that happens." },
+      a:"Payment is completed securely through PayPal on the checkout page. If you run into any trouble with payment, contact us directly on WhatsApp and we'll help you." },
     { q:"Can I contact you before purchasing?",
-      a:"Absolutely. Tap any WhatsApp button on this page to reach us directly. We're happy to answer questions about course content, structure, or pricing before you decide." },
-    { q:"Do these courses guarantee online income?",
-      a:"<strong>No.</strong> These are educational courses. They do not guarantee any specific income, business result, or financial outcome. Results depend on your own effort, skills, market conditions, and many other factors outside our control. Please treat them as learning resources, not income promises." }
+      a:"Absolutely. Tap any WhatsApp button on this page to reach us directly. We're happy to answer questions about the course content, structure, or pricing before you decide." },
+    { q:"Does this course guarantee online income?",
+      a:"<strong>No.</strong> This is an educational course. It does not guarantee any specific income, business result, or financial outcome. Results depend on your own effort, skills, market conditions, and many other factors outside our control. Please treat it as a learning resource, not an income promise." }
   ]
 };
 
@@ -1565,43 +1514,7 @@ function waLink(msg){
 }
 
 /* ============================================================
-   RENDER COURSES
-   ============================================================ */
-(function renderCourses(){
-  const wrap = document.getElementById("courseGrid");
-  if(!wrap) return;
-  wrap.innerHTML = CONFIG.courses.map(c => `
-    <article class="course-card reveal" id="course-${c.id}">
-      <div class="course-media">
-        <span class="course-tag ${c.tagClass||''}">${c.tag}</span>
-        <img src="${c.image}" alt="${c.imageAlt}" loading="lazy" />
-      </div>
-      <div class="course-body">
-        <h3>${c.title}</h3>
-        <p>${c.description}</p>
-        <div class="course-meta">
-          ${c.chips.map(ch=>`<span class="chip ${ch.c}">${ch.t}</span>`).join("")}
-        </div>
-        <div class="course-footer">
-          <div>
-            <span class="price">${c.price}</span>
-            <span class="price-note">${c.priceNote}</span>
-          </div>
-        </div>
-        <div class="course-actions">
-          <a class="btn btn-primary btn-sm" href="${c.checkoutUrl}">${c.ctaText} →</a>
-          <a class="btn btn-outline btn-sm" data-wa-link href="#"
-             data-wa-msg="Hello, I'm interested in the '${c.title}' course. Please share the details and pricing.">
-            💬 Ask
-          </a>
-        </div>
-      </div>
-    </article>
-  `).join("");
-})();
-
-/* ============================================================
-   RENDER HUSTLES
+   RENDER WHAT WE PROVIDE
    ============================================================ */
 (function renderHustles(){
   const wrap = document.getElementById("hustleGrid");
@@ -1615,13 +1528,6 @@ function waLink(msg){
       <div class="hustle-body">
         <h3>${h.title}</h3>
         <p>${h.text}</p>
-        <div class="hustle-foot">
-          <span class="hustle-cost">${h.cost}</span>
-          <a class="hustle-link" data-wa-link href="#"
-             data-wa-msg="Hi, I'd like to learn more about ${h.title} as a side hustle.">
-            Learn More <span aria-hidden="true">→</span>
-          </a>
-        </div>
       </div>
     </article>
   `).join("");
