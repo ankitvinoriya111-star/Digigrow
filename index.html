@@ -1,11 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Digital Growth Academy — Learn Online Business, Side Hustles & Money Skills</title>
-<meta name="description" content="A self-paced digital business course on online business ideas, side hustles, productivity and smart money habits. Honest, practical education with direct WhatsApp support." />
+
+<!-- ============================================================
+     PRIMARY SEO — USA-targeted
+     ============================================================ -->
+<title>Make Money Online Course for Beginners | Digital Growth Academy</title>
+<meta name="description" content="Learn how to make money online with a self-paced digital business course — online business ideas, side hustles, and digital marketing for beginners in the USA." />
+<meta name="keywords" content="make money online, online business course, side hustles, digital marketing course, online income, work from home, USA online course" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="author" content="Digital Growth Academy" />
 <meta name="theme-color" content="#faf6ef" />
+
+<!-- ============================================================
+     OPEN GRAPH / SOCIAL SHARING
+     ============================================================ -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Digital Growth Academy" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:title" content="Make Money Online Course for Beginners | Digital Growth Academy" />
+<meta property="og:description" content="Self-paced digital business course covering online business ideas, side hustles, and digital marketing for beginners in the USA." />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Make Money Online Course for Beginners | Digital Growth Academy" />
+<meta name="twitter:description" content="Self-paced digital business course covering online business ideas, side hustles, and digital marketing for beginners in the USA." />
+
+<!-- ============================================================
+     ⚠️ REPLACE THIS BLOCK BEFORE DEPLOYING
+     Uncomment the lines below and swap "https://yourdomain.com/"
+     with your real live domain so search engines index the right URL.
+     ============================================================
+<link rel="canonical" href="https://yourdomain.com/" />
+<meta property="og:url" content="https://yourdomain.com/" />
+<meta property="og:image" content="https://yourdomain.com/images/hero-banner.png" />
+<meta name="twitter:image" content="https://yourdomain.com/images/hero-banner.png" />
+-->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +57,10 @@
   --ink-2:#4a4a5e;
   --ink-3:#8a8a9e;
   --ink-4:#b8b8c8;
+
+  /* Surfaces that STAY dark in both light and dark themes */
+  --surface-strong:#171829;
+  --on-strong:#faf6ef;
 
   --violet:#6366f1;
   --violet-2:#8b5cf6;
@@ -57,6 +93,41 @@
   --ff-serif:'Fraunces', Georgia, serif;
 }
 
+/* ============================================================
+   DARK MODE — variable overrides only. Layout untouched.
+   ============================================================ */
+html[data-theme="dark"]{
+  --cream:#0d0f1c;
+  --cream-2:#131627;
+  --cream-3:#1c1f33;
+  --white:#181a2c;
+
+  --ink:#eef0f8;
+  --ink-2:#a8accc;
+  --ink-3:#6d7290;
+  --ink-4:#4a4e68;
+
+  --surface-strong:#05060d;
+  --on-strong:#eef0f8;
+
+  --violet:#8b8ff8;
+  --violet-2:#a78bfa;
+  --pink:#f472b6;
+  --amber:#fcd34d;
+  --amber-2:#fbbf24;
+  --mint:#34d399;
+  --mint-2:#6ee7b7;
+
+  --border:rgba(238,240,248,.08);
+  --border-2:rgba(238,240,248,.16);
+
+  --shadow-xs:0 1px 2px rgba(0,0,0,.4);
+  --shadow-sm:0 4px 12px rgba(0,0,0,.35);
+  --shadow:0 16px 40px -12px rgba(0,0,0,.5);
+  --shadow-lg:0 32px 70px -20px rgba(0,0,0,.6);
+  --shadow-xl:0 48px 100px -28px rgba(0,0,0,.7);
+}
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
@@ -67,6 +138,7 @@ body{
   line-height:1.6;
   overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
+  transition:background-color .3s ease, color .3s ease;
 }
 img{max-width:100%;display:block;height:auto}
 a{color:inherit;text-decoration:none}
@@ -81,7 +153,7 @@ ul{list-style:none}
    LAYOUT
    ============================================================ */
 .container{max-width:var(--max);margin:0 auto;padding:0 24px;width:100%}
-section{padding:100px 0;position:relative}
+section{padding:100px 0;position:relative;scroll-margin-top:96px}
 
 .eyebrow{
   display:inline-flex;align-items:center;gap:8px;
@@ -119,13 +191,12 @@ section{padding:100px 0;position:relative}
 }
 .sec-head p{color:var(--ink-2);font-size:1.08rem;max-width:580px;margin:0 auto}
 
-/* Decorative sparkles / blobs */
 .spark{position:absolute;pointer-events:none;z-index:1;opacity:.9}
 .spark svg{display:block}
 .blob{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;z-index:0}
 
 /* ============================================================
-   BUTTONS — pill, playful
+   BUTTONS
    ============================================================ */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:10px;
@@ -150,7 +221,7 @@ section{padding:100px 0;position:relative}
 .btn-wa:hover{transform:translateY(-3px);background:#20bd5a;box-shadow:0 20px 44px -8px rgba(37,211,102,.6), 0 3px 0 0 rgba(255,255,255,.4) inset}
 
 .btn-ink{
-  background:var(--ink);color:var(--cream);
+  background:var(--surface-strong);color:var(--on-strong);
   box-shadow:0 12px 28px -8px rgba(23,24,41,.4);
 }
 .btn-ink:hover{transform:translateY(-3px);background:#2a2b42}
@@ -183,17 +254,20 @@ header.site-nav .nav-shell{
   padding:10px 10px 10px 24px;
   display:flex;align-items:center;justify-content:space-between;gap:20px;
   box-shadow:var(--shadow-sm);
-  transition:box-shadow .3s;
+  transition:box-shadow .3s, background-color .3s;
 }
 header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255,255,255,.95)}
+html[data-theme="dark"] header.site-nav .nav-shell{background:rgba(24,26,44,.85)}
+html[data-theme="dark"] header.site-nav.scrolled .nav-shell{background:rgba(24,26,44,.95)}
 
-.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.02rem;letter-spacing:-.3px;flex-shrink:0}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.02rem;letter-spacing:-.3px;flex-shrink:0;min-width:0}
 .brand-mark{
   width:38px;height:38px;border-radius:12px;
   background:linear-gradient(135deg,#6366f1 0%,#ec4899 100%);
   display:grid;place-items:center;
   box-shadow:0 8px 20px -6px rgba(99,102,241,.5), 0 3px 0 0 rgba(255,255,255,.25) inset;
   position:relative;overflow:hidden;
+  flex-shrink:0;
 }
 .brand-mark svg{width:20px;height:20px;fill:#fff;position:relative;z-index:2}
 .brand-mark::after{
@@ -214,18 +288,67 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
 .nav-links a:hover{color:var(--ink)}
 .nav-links a:hover::after{width:100%}
 
-.nav-cta{display:flex;align-items:center;gap:10px}
+.nav-cta{display:flex;align-items:center;gap:10px;flex-shrink:0}
+
 .menu-toggle{
   display:none;width:44px;height:44px;border-radius:50%;
   border:1.5px solid var(--border-2);background:var(--white);
   align-items:center;justify-content:center;font-size:1.1rem;
+  color:var(--ink);flex-shrink:0;
 }
+
+/* ============================================================
+   THEME TOGGLE
+   ============================================================ */
+.theme-toggle{
+  width:44px;height:44px;border-radius:50%;
+  border:1.5px solid var(--border-2);
+  background:var(--white);
+  color:var(--ink-2);
+  display:grid;place-items:center;
+  transition:border-color .25s, color .25s, transform .25s;
+  flex-shrink:0;
+  position:relative;
+  overflow:hidden;
+}
+.theme-toggle:hover{border-color:var(--violet);color:var(--violet);transform:translateY(-2px)}
+.theme-toggle svg{
+  width:20px;height:20px;
+  position:absolute;
+  transition:opacity .3s ease, transform .3s ease;
+}
+.theme-toggle .ico-moon{opacity:1;transform:rotate(0) scale(1)}
+.theme-toggle .ico-sun{opacity:0;transform:rotate(-90deg) scale(.5)}
+html[data-theme="dark"] .theme-toggle .ico-moon{opacity:0;transform:rotate(90deg) scale(.5)}
+html[data-theme="dark"] .theme-toggle .ico-sun{opacity:1;transform:rotate(0) scale(1)}
+
 @media(max-width:1040px){
   .nav-links{display:none}
   .nav-cta .hide-md{display:none}
   .menu-toggle{display:flex}
   header.site-nav .nav-shell{padding:10px 10px 10px 18px}
 }
+
+@media(max-width:640px){
+  .brand{font-size:.94rem;gap:9px}
+  .brand-mark{width:34px;height:34px;border-radius:10px}
+  .brand-mark svg{width:18px;height:18px}
+  .nav-cta{gap:8px}
+  .nav-cta .btn-sm{padding:10px 16px;font-size:.82rem}
+  .theme-toggle{width:40px;height:40px}
+  .theme-toggle svg{width:18px;height:18px}
+  .menu-toggle{width:40px;height:40px;font-size:1rem}
+}
+@media(max-width:480px){
+  .nav-cta .btn-primary{display:none}
+  .brand{font-size:.9rem}
+  .brand-mark{width:30px;height:30px;border-radius:9px}
+  .brand-mark svg{width:16px;height:16px}
+  .theme-toggle,.menu-toggle{width:36px;height:36px}
+  .theme-toggle svg{width:16px;height:16px}
+  .menu-toggle{font-size:.95rem}
+}
+
 .mobile-menu{
   display:none;flex-direction:column;gap:2px;
   max-width:var(--max);margin:12px auto 0;
@@ -244,7 +367,7 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
 .mobile-menu a:hover{color:var(--violet)}
 
 /* ============================================================
-   HERO — Canva style with tilted photo cards
+   HERO
    ============================================================ */
 .hero{
   position:relative;overflow:hidden;
@@ -263,6 +386,9 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
   bottom:-15%;left:35%;width:460px;height:460px;
   background:radial-gradient(circle, rgba(52,211,153,.25), transparent 70%);
 }
+html[data-theme="dark"] .hero-blob-1{background:radial-gradient(circle, rgba(139,92,246,.22), transparent 70%)}
+html[data-theme="dark"] .hero-blob-2{background:radial-gradient(circle, rgba(251,191,36,.18), transparent 70%)}
+html[data-theme="dark"] .hero-blob-3{background:radial-gradient(circle, rgba(52,211,153,.14), transparent 70%)}
 
 .hero-grid{
   display:grid;grid-template-columns:1.05fr 1fr;
@@ -333,7 +459,6 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
 .hero-trust .stars{color:var(--amber-2);letter-spacing:1px;font-size:1rem}
 .hero-trust b{color:var(--ink)}
 
-/* Hero visual — tilted photo cards */
 .hero-visual{position:relative;min-height:560px;perspective:1400px}
 
 .hero-photo-main{
@@ -366,36 +491,16 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
 .spark-1{top:2%;right:8%}
 .spark-2{bottom:8%;left:2%}
 
-/* --- Header banner image (header-image.png) --- */
-.hero-banner{
-  margin-top:60px;
-  border-radius:var(--r-xl);
-  overflow:hidden;
-  box-shadow:var(--shadow-xl);
-  border:6px solid var(--white);
-  background:var(--white);
-  position:relative;
-  z-index:3;
-}
-.hero-banner img{
-  width:100%;
-  height:auto;
-  display:block;
-  object-fit:cover;
-}
-
 @media(max-width:960px){
   .hero{padding:20px 0 70px}
   .hero-grid{grid-template-columns:1fr;gap:60px}
   .hero-visual{min-height:480px;order:-1;max-width:520px;margin:0 auto;width:100%}
-  .hero-banner{margin-top:44px}
 }
 @media(max-width:520px){
   section{padding:70px 0}
   header.site-nav{top:8px;padding:0 14px}
   .hero-copy h1{letter-spacing:-1.8px}
   .hero-visual{min-height:380px}
-  .hero-banner{margin-top:28px;border-width:4px;border-radius:var(--r-lg)}
 }
 
 /* ============================================================
@@ -405,7 +510,7 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
   padding:0 0 20px;
 }
 .trust-strip-inner{
-  background:var(--ink);color:var(--cream);
+  background:var(--surface-strong);color:var(--on-strong);
   border-radius:var(--r-xl);
   padding:26px 40px;
   display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
@@ -465,6 +570,11 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
   color:#92400e;
   margin-bottom:24px;
   box-shadow:var(--shadow-xs);
+}
+html[data-theme="dark"] .offer-label{
+  background:linear-gradient(135deg,rgba(251,191,36,.22),rgba(245,158,11,.22));
+  border-color:rgba(251,191,36,.4);
+  color:var(--amber);
 }
 .offer-title{
   font-size:clamp(1.6rem,3.6vw,2.5rem);
@@ -526,7 +636,7 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
 }
 
 /* ============================================================
-   SIDE HUSTLES / WHAT WE PROVIDE
+   WHAT WE PROVIDE
    ============================================================ */
 .hustle-section{
   background:var(--cream-2);
@@ -540,6 +650,7 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
   top:-20%;right:-10%;width:600px;height:600px;
   background:radial-gradient(circle, rgba(139,92,246,.2), transparent 65%);
 }
+html[data-theme="dark"] .hustle-blob{background:radial-gradient(circle, rgba(139,92,246,.12), transparent 65%)}
 .hustle-grid{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;
   position:relative;z-index:2;
@@ -573,7 +684,7 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
 .hustle-body p{color:var(--ink-2);font-size:.9rem;flex:1;line-height:1.6}
 
 /* ============================================================
-   WHY CHOOSE — premium editorial photo cards
+   WHY CHOOSE
    ============================================================ */
 .why-section{
   background:var(--cream-2);
@@ -630,6 +741,7 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
   color:var(--ink);
   box-shadow:0 6px 18px -6px rgba(0,0,0,.25);
 }
+html[data-theme="dark"] .why-num{background:rgba(24,26,44,.94)}
 .why-body{
   padding:26px 26px 30px;
   display:flex;flex-direction:column;gap:10px;
@@ -704,6 +816,10 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
   color:#059669;
   display:grid;place-items:center;font-size:.85rem;font-weight:900;
 }
+html[data-theme="dark"] .story-list .check{
+  background:linear-gradient(135deg,rgba(16,185,129,.25),rgba(52,211,153,.25));
+  color:#6ee7b7;
+}
 
 @media(max-width:900px){
   .story-grid{grid-template-columns:1fr;gap:50px}
@@ -714,7 +830,7 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
    JOURNEY
    ============================================================ */
 .journey-section{
-  background:var(--ink);color:var(--cream);
+  background:var(--surface-strong);color:var(--on-strong);
   border-radius:60px;
   margin:40px auto;
   max-width:calc(var(--max) - 40px);
@@ -731,7 +847,7 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
   background:radial-gradient(circle, rgba(251,191,36,.18), transparent 60%);
   pointer-events:none;
 }
-.journey-section .sec-head h2{color:var(--cream)}
+.journey-section .sec-head h2{color:var(--on-strong)}
 .journey-section .sec-head h2 .serif{color:var(--amber)}
 .journey-section .sec-head p{color:rgba(250,246,239,.7)}
 .journey-section .eyebrow{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);color:var(--amber)}
@@ -745,7 +861,7 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
 .journey-num{
   width:90px;height:90px;border-radius:50%;margin:0 auto 24px;
   display:grid;place-items:center;font-size:2rem;font-weight:800;
-  background:var(--ink);
+  background:var(--surface-strong);
   border:3px solid var(--violet);
   color:var(--amber);
   box-shadow:0 0 0 10px rgba(99,102,241,.1), 0 20px 40px -12px rgba(0,0,0,.5);
@@ -753,7 +869,7 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
 }
 .journey-step:nth-child(2) .journey-num{border-color:var(--amber);color:var(--amber);box-shadow:0 0 0 10px rgba(251,191,36,.12), 0 20px 40px -12px rgba(0,0,0,.5)}
 .journey-step:nth-child(3) .journey-num{border-color:var(--mint-2);color:var(--mint-2);box-shadow:0 0 0 10px rgba(52,211,153,.12), 0 20px 40px -12px rgba(0,0,0,.5)}
-.journey-step h3{font-size:1.18rem;font-weight:800;margin-bottom:10px;color:var(--cream);letter-spacing:-.3px}
+.journey-step h3{font-size:1.18rem;font-weight:800;margin-bottom:10px;color:var(--on-strong);letter-spacing:-.3px}
 .journey-step p{color:rgba(250,246,239,.65);font-size:.94rem;max-width:300px;margin:0 auto;line-height:1.65}
 
 @media(max-width:800px){
@@ -774,7 +890,6 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
   box-shadow:var(--shadow-xl);
   transform:rotate(-2deg);
   transition:transform .6s;
-  background:var(--white);
 }
 .preview-cover:hover{transform:rotate(0)}
 .preview-cover img{width:100%;height:100%;object-fit:cover}
@@ -817,6 +932,10 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
 .lesson:nth-child(2) .lesson-num{background:linear-gradient(135deg,#fce7f3,#fbcfe8);color:var(--pink)}
 .lesson:nth-child(3) .lesson-num{background:linear-gradient(135deg,#fef3c7,#fde68a);color:var(--amber-2)}
 .lesson:nth-child(4) .lesson-num{background:linear-gradient(135deg,#d1fae5,#a7f3d0);color:#059669}
+html[data-theme="dark"] .lesson-num{background:linear-gradient(135deg,rgba(99,102,241,.25),rgba(139,92,246,.25));color:var(--violet)}
+html[data-theme="dark"] .lesson:nth-child(2) .lesson-num{background:linear-gradient(135deg,rgba(236,72,153,.25),rgba(244,114,182,.25));color:var(--pink)}
+html[data-theme="dark"] .lesson:nth-child(3) .lesson-num{background:linear-gradient(135deg,rgba(251,191,36,.25),rgba(245,158,11,.25));color:var(--amber)}
+html[data-theme="dark"] .lesson:nth-child(4) .lesson-num{background:linear-gradient(135deg,rgba(16,185,129,.25),rgba(52,211,153,.25));color:var(--mint)}
 .lesson-txt{flex:1}
 .lesson-txt b{display:block;font-size:.92rem;font-weight:700;color:var(--ink)}
 .lesson .arrow{color:var(--ink-3);font-size:.9rem;transition:all .2s;font-weight:700}
@@ -854,6 +973,7 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
   color:var(--violet);
   transition:transform .35s cubic-bezier(.2,.9,.3,1);
 }
+html[data-theme="dark"] .faq-ico{background:linear-gradient(135deg,rgba(99,102,241,.25),rgba(139,92,246,.25))}
 .faq-item[open] .faq-ico{transform:rotate(45deg);background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff}
 .faq-a{padding:0 26px 24px;color:var(--ink-2);font-size:.96rem;line-height:1.75}
 .faq-a strong{color:var(--ink);font-weight:700}
@@ -907,7 +1027,7 @@ header.site-nav.scrolled .nav-shell{box-shadow:var(--shadow);background:rgba(255
    FOOTER
    ============================================================ */
 footer{
-  background:var(--ink);color:var(--cream);
+  background:var(--surface-strong);color:var(--on-strong);
   border-radius:60px 60px 0 0;
   padding:80px 0 32px;margin-top:40px;
   position:relative;overflow:hidden;
@@ -922,7 +1042,7 @@ footer::before{
   padding-bottom:52px;border-bottom:1px solid rgba(250,246,239,.1);
   position:relative;z-index:2;
 }
-.footer-brand .brand{color:var(--cream)}
+.footer-brand .brand{color:var(--on-strong)}
 .footer-brand .brand .vi{color:var(--amber)}
 .footer-brand p{color:rgba(250,246,239,.65);font-size:.94rem;margin:20px 0 24px;max-width:340px;line-height:1.7}
 .footer-wa{
@@ -998,6 +1118,17 @@ footer::before{
 </head>
 <body>
 
+<!-- Theme init — runs before content paints to prevent flash -->
+<script>
+  (function(){
+    try {
+      if (localStorage.getItem('dga-theme') === 'dark') {
+        document.documentElement.setAttribute('data-theme','dark');
+      }
+    } catch (e) {}
+  })();
+</script>
+
 <a class="skip-link" href="#main">Skip to content</a>
 
 <!-- ============================================================
@@ -1006,7 +1137,7 @@ footer::before{
 <header class="site-nav" id="siteNav">
   <div class="container" style="padding:0">
     <div class="nav-shell">
-      <a href="#top" class="brand" aria-label="Digital Growth Academy">
+      <a href="#top" class="brand" aria-label="Digital Growth Academy — Make Money Online Course">
         <span class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 24 24"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5zm0 2.3 6.5 3.6v7.2L12 18.7l-6.5-3.6V7.9L12 4.3zm0 3L7.5 9.9 12 12.4l4.5-2.5L12 7.3zm-4.5 4.4v3l4.5 2.5 4.5-2.5v-3L12 14.2l-4.5-2.5z"/></svg>
         </span>
@@ -1027,6 +1158,19 @@ footer::before{
           WhatsApp
         </a>
         <a class="btn btn-primary btn-sm" href="#courses">Explore Course</a>
+
+        <button class="theme-toggle" id="themeToggle" type="button"
+                aria-label="Switch to dark mode" aria-pressed="false" title="Toggle dark mode">
+          <svg class="ico-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+          <svg class="ico-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+
         <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
       </div>
     </div>
@@ -1100,10 +1244,10 @@ footer::before{
 
         <div class="hero-trust">
           <div class="avatar-stack" aria-hidden="true">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80" alt="" />
-            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&q=80" alt="" />
-            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=80&q=80" alt="" />
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" alt="" />
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80" alt="" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&q=80" alt="" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=80&q=80" alt="" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" alt="" loading="lazy" />
           </div>
           <div>
             <span class="stars" aria-hidden="true">★★★★★</span>
@@ -1114,26 +1258,18 @@ footer::before{
 
       <div class="hero-visual reveal" aria-hidden="true">
         <div class="hero-photo-main">
-          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1000&q=80" alt="Professional woman working on a laptop" loading="eager" />
+          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1000&q=80"
+               alt="Entrepreneur working on a laptop learning online business and digital marketing skills"
+               loading="eager" width="1000" height="1250" />
         </div>
         <div class="hero-photo-secondary">
-          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80" alt="Financial planning notes and calculator" loading="eager" />
+          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80"
+               alt="Money management notebook and calculator used for personal finance and budgeting"
+               loading="eager" width="800" height="800" />
         </div>
       </div>
 
     </div>
-
-    <!-- ============================================================
-         HEADER IMAGE — header-image.png
-         File must be in the repo root (same folder as this HTML file).
-         ============================================================ -->
-    <div class="hero-banner reveal">
-      <img
-        src="./header-image.png"
-        alt="Digital Growth Academy — Build Your Digital Future. Practical digital courses to help you learn, earn and grow at your own pace."
-        loading="eager" />
-    </div>
-
   </div>
 </section>
 
@@ -1144,19 +1280,19 @@ footer::before{
   <div class="container">
     <div class="trust-strip-inner">
       <div class="item">
-        <svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4zm-1 15-4-4 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4zm-1 15-4-4 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
         <span>Secure WhatsApp support</span>
       </div>
       <div class="item">
-        <svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4z"/></svg>
         <span>Honest, no-hype lessons</span>
       </div>
       <div class="item">
-        <svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4zm0 4 5 2.5v3.8c0 3.3-2.1 6.3-5 7.2-2.9-.9-5-3.9-5-7.2V8.5L12 6z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4zm0 4 5 2.5v3.8c0 3.3-2.1 6.3-5 7.2-2.9-.9-5-3.9-5-7.2V8.5L12 6z"/></svg>
         <span>Direct human contact</span>
       </div>
       <div class="item">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
         <span>Practical frameworks</span>
       </div>
     </div>
@@ -1223,7 +1359,7 @@ footer::before{
 </section>
 
 <!-- ============================================================
-     WHY CHOOSE — premium editorial photo cards
+     WHY CHOOSE
      ============================================================ -->
 <section class="why-section" id="why">
   <div class="container">
@@ -1237,7 +1373,8 @@ footer::before{
       <article class="why-card reveal">
         <div class="why-media">
           <span class="why-num">01</span>
-          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="Business planning workspace with notes, charts and a laptop" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80"
+               alt="Business planning workspace with notes, charts and a laptop" loading="lazy" width="900" height="600" />
         </div>
         <div class="why-body">
           <span class="why-accent" aria-hidden="true"></span>
@@ -1249,7 +1386,8 @@ footer::before{
       <article class="why-card reveal">
         <div class="why-media">
           <span class="why-num">02</span>
-          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Person studying and learning on a laptop" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
+               alt="Person studying and learning online business skills on a laptop" loading="lazy" width="900" height="600" />
         </div>
         <div class="why-body">
           <span class="why-accent" aria-hidden="true"></span>
@@ -1261,7 +1399,8 @@ footer::before{
       <article class="why-card reveal">
         <div class="why-media">
           <span class="why-num">03</span>
-          <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80" alt="Clean productivity workspace with laptop, notebook and coffee" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80"
+               alt="Clean productivity workspace with laptop, notebook and coffee" loading="lazy" width="900" height="600" />
         </div>
         <div class="why-body">
           <span class="why-accent" aria-hidden="true"></span>
@@ -1273,7 +1412,8 @@ footer::before{
       <article class="why-card reveal">
         <div class="why-media">
           <span class="why-num">04</span>
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="Digital marketing analytics dashboard on a laptop screen" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"
+               alt="Digital marketing analytics dashboard showing online business metrics" loading="lazy" width="900" height="600" />
         </div>
         <div class="why-body">
           <span class="why-accent" aria-hidden="true"></span>
@@ -1294,7 +1434,8 @@ footer::before{
       <div class="story-visual reveal">
         <div class="story-deco" aria-hidden="true"></div>
         <div class="story-img">
-          <img src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1000&q=80" alt="Entrepreneur reviewing notes and planning" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1000&q=80"
+               alt="Entrepreneur reviewing notes and planning an online business strategy" loading="lazy" width="1000" height="1250" />
         </div>
       </div>
 
@@ -1356,11 +1497,8 @@ footer::before{
     <div class="preview-layout">
       <div class="preview-stack reveal">
         <div class="preview-cover">
-          <!-- ============================================================
-               SAMPLE PREVIEW IMAGE — sample-preview.png
-               File must be in the repo root (same folder as this HTML file).
-               ============================================================ -->
-          <img src="./sample-preview.png" alt="Digital Growth Academy course preview — modules, lessons and business resources" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1000&q=80"
+               alt="Laptop, notebook and coffee on a desk — sample preview of the online business course" loading="lazy" width="1000" height="750" />
           <span class="preview-badge">● Sample Preview</span>
           <div class="preview-title">
             <h3>Preview of This Course</h3>
@@ -1561,12 +1699,9 @@ footer::before{
    ⚙️  CONFIG
    ============================================================ */
 const CONFIG = {
-  /* ⚠️ VERIFY: "945277258" appears to be missing a digit for an
-     Indian mobile number (10 digits). WhatsApp requires FULL
-     international format: country code + number, no +, no spaces.
-     Example for India: "919876543210"
-     Until replaced, the WhatsApp buttons will NOT reach a chat. */
-  WHATSAPP_NUMBER: "91945277258",   // ← replace with verified number
+  /* ✅ VERIFIED WhatsApp number in full international format:
+     country code (91) + 10-digit number, no +, no spaces. */
+  WHATSAPP_NUMBER: "919452797258",
 
   WHATSAPP_MESSAGE: "Hello, I'm interested in your digital business course. Please share the course details and pricing.",
 
@@ -1615,6 +1750,39 @@ function waLink(msg){
   const m = encodeURIComponent(msg || CONFIG.WHATSAPP_MESSAGE);
   return `https://wa.me/${num}?text=${m}`;
 }
+
+/* ============================================================
+   THEME TOGGLE (localStorage-aware)
+   ============================================================ */
+(function themeToggle(){
+  const btn = document.getElementById("themeToggle");
+  if(!btn) return;
+
+  function currentTheme(){
+    return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+  }
+
+  function reflect(){
+    const isDark = currentTheme() === "dark";
+    btn.setAttribute("aria-pressed", isDark ? "true" : "false");
+    btn.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", isDark ? "#0d0f1c" : "#faf6ef");
+  }
+
+  btn.addEventListener("click", () => {
+    const next = currentTheme() === "dark" ? "light" : "dark";
+    if (next === "dark") {
+      document.documentElement.setAttribute("data-theme","dark");
+    } else {
+      document.documentElement.removeAttribute("data-theme");
+    }
+    try { localStorage.setItem("dga-theme", next); } catch(e){}
+    reflect();
+  });
+
+  reflect();
+})();
 
 /* ============================================================
    RENDER WHAT WE PROVIDE
