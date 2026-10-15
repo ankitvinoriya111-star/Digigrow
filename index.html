@@ -485,7 +485,7 @@ html[data-theme="dark"] .hero-blob-3{background:radial-gradient(circle, rgba(52,
 @media(max-width:700px){.trust-strip-inner{padding:22px 26px;justify-content:center}}
 
 /* ============================================================
-   OFFER BLOCK
+   OFFER BLOCK — clean single-color surface
    ============================================================ */
 #courses{padding-top:80px}
 
@@ -500,16 +500,6 @@ html[data-theme="dark"] .hero-blob-3{background:radial-gradient(circle, rgba(52,
   box-shadow:var(--shadow-lg);
   overflow:hidden;
 }
-.offer-card::before{
-  content:"";position:absolute;top:-40%;right:-10%;width:55%;height:180%;
-  background:radial-gradient(circle, rgba(139,92,246,.16), transparent 62%);
-  pointer-events:none;
-}
-.offer-card::after{
-  content:"";position:absolute;bottom:-45%;left:-10%;width:55%;height:180%;
-  background:radial-gradient(circle, rgba(251,191,36,.18), transparent 62%);
-  pointer-events:none;
-}
 .offer-card > *{position:relative;z-index:2}
 
 .offer-label{
@@ -517,15 +507,15 @@ html[data-theme="dark"] .hero-blob-3{background:radial-gradient(circle, rgba(52,
   font-size:.7rem;font-weight:800;letter-spacing:2.4px;
   text-transform:uppercase;
   padding:9px 20px;border-radius:var(--r-full);
-  background:linear-gradient(135deg,#fef3c7,#fde68a);
+  background:#fde68a;
   border:1.5px solid rgba(245,158,11,.35);
   color:#92400e;
   margin-bottom:24px;
   box-shadow:var(--shadow-xs);
 }
 html[data-theme="dark"] .offer-label{
-  background:linear-gradient(135deg,rgba(251,191,36,.22),rgba(245,158,11,.22));
-  border-color:rgba(251,191,36,.4);
+  background:rgba(251,191,36,.25);
+  border-color:rgba(251,191,36,.45);
   color:var(--amber);
 }
 .offer-title{
@@ -576,7 +566,9 @@ html[data-theme="dark"] .offer-label{
 }
 .offer-actions .btn{padding:18px 34px;font-size:1rem}
 .offer-support{
-  font-size:.86rem;color:var(--ink-3);font-weight:500;
+  font-size:.92rem;
+  color:var(--ink);
+  font-weight:600;
   max-width:540px;margin:0 auto;line-height:1.65;
 }
 .offer-section-bottom{padding:0 0 100px}
@@ -832,7 +824,7 @@ html[data-theme="dark"] .story-list .check{
 }
 
 /* ============================================================
-   FAQ — now a plain section on the base cream background
+   FAQ
    ============================================================ */
 .faq-section{padding:100px 0}
 .faq-list{max-width:840px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
@@ -1292,13 +1284,13 @@ footer::before{
 </section>
 
 <!-- ============================================================
-     HOW TO ACCESS this COURSE
+     HOW TO ACCESS YOUR COURSE
      ============================================================ -->
 <section class="journey-section" id="journey">
   <div class="container">
     <div class="sec-head reveal">
       <span class="eyebrow">📚 Course Access</span>
-      <h2>How to Access <span class="serif">this Course</span></h2>
+      <h2>How to Access <span class="serif">Your Course</span></h2>
       <p>Get started in three simple steps.</p>
     </div>
 
@@ -1315,8 +1307,8 @@ footer::before{
       </div>
       <div class="journey-step reveal">
         <div class="journey-num">3</div>
-        <h3>Download and Access this Course</h3>
-        <p>Access this course materials using the delivery instructions provided after purchase.</p>
+        <h3>Download and Access Your Course</h3>
+        <p>Access your course materials using the delivery instructions provided after purchase.</p>
       </div>
     </div>
   </div>
