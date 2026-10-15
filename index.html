@@ -23,15 +23,12 @@
 <meta property="og:title" content="Make Money Online Course for Beginners | Digital Growth Academy" />
 <meta property="og:description" content="Self-paced digital business course covering online business ideas, side hustles, and digital marketing for beginners in the USA." />
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Make Money Online Course for Beginners | Digital Growth Academy" />
 <meta name="twitter:description" content="Self-paced digital business course covering online business ideas, side hustles, and digital marketing for beginners in the USA." />
 
 <!-- ============================================================
      ⚠️ REPLACE THIS BLOCK BEFORE DEPLOYING
-     Uncomment the lines below and swap "https://yourdomain.com/"
-     with your real live domain so search engines index the right URL.
      ============================================================
 <link rel="canonical" href="https://yourdomain.com/" />
 <meta property="og:url" content="https://yourdomain.com/" />
@@ -45,23 +42,19 @@
 
 <style>
 /* ============================================================
-   TOKENS — Canva-inspired palette
+   TOKENS
    ============================================================ */
 :root{
   --cream:#faf6ef;
   --cream-2:#f3ecdd;
   --cream-3:#ebe2cf;
   --white:#ffffff;
-
   --ink:#171829;
   --ink-2:#4a4a5e;
   --ink-3:#8a8a9e;
   --ink-4:#b8b8c8;
-
-  /* Surfaces that STAY dark in both light and dark themes */
   --surface-strong:#171829;
   --on-strong:#faf6ef;
-
   --violet:#6366f1;
   --violet-2:#8b5cf6;
   --pink:#ec4899;
@@ -72,44 +65,37 @@
   --mint-2:#34d399;
   --sky:#38bdf8;
   --wa:#25D366;
-
   --border:rgba(23,24,41,.08);
   --border-2:rgba(23,24,41,.12);
-
   --r-sm:12px;
   --r:18px;
   --r-lg:26px;
   --r-xl:34px;
   --r-full:999px;
-
   --shadow-xs:0 1px 2px rgba(23,24,41,.05);
   --shadow-sm:0 4px 12px rgba(23,24,41,.06);
   --shadow:0 16px 40px -12px rgba(23,24,41,.12);
   --shadow-lg:0 32px 70px -20px rgba(23,24,41,.18);
   --shadow-xl:0 48px 100px -28px rgba(23,24,41,.25);
-
   --max:1240px;
   --ff:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --ff-serif:'Fraunces', Georgia, serif;
 }
 
 /* ============================================================
-   DARK MODE — variable overrides only. Layout untouched.
+   DARK MODE
    ============================================================ */
 html[data-theme="dark"]{
   --cream:#0d0f1c;
   --cream-2:#131627;
   --cream-3:#1c1f33;
   --white:#181a2c;
-
   --ink:#eef0f8;
   --ink-2:#a8accc;
   --ink-3:#6d7290;
   --ink-4:#4a4e68;
-
   --surface-strong:#05060d;
   --on-strong:#eef0f8;
-
   --violet:#8b8ff8;
   --violet-2:#a78bfa;
   --pink:#f472b6;
@@ -117,10 +103,8 @@ html[data-theme="dark"]{
   --amber-2:#fbbf24;
   --mint:#34d399;
   --mint-2:#6ee7b7;
-
   --border:rgba(238,240,248,.08);
   --border-2:rgba(238,240,248,.16);
-
   --shadow-xs:0 1px 2px rgba(0,0,0,.4);
   --shadow-sm:0 4px 12px rgba(0,0,0,.35);
   --shadow:0 16px 40px -12px rgba(0,0,0,.5);
@@ -181,14 +165,6 @@ section{padding:100px 0;position:relative;scroll-margin-top:96px}
   color:var(--violet);
   letter-spacing:-.8px;
 }
-.sec-head h2 .squiggle{
-  position:relative;display:inline-block;
-}
-.sec-head h2 .squiggle::after{
-  content:"";position:absolute;left:0;right:0;bottom:-6px;
-  height:14px;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 14'%3E%3Cpath d='M2 8 Q 30 2, 60 8 T 120 8 T 180 8 T 240 8 T 298 8' fill='none' stroke='%23fbbf24' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat;
-}
 .sec-head p{color:var(--ink-2);font-size:1.08rem;max-width:580px;margin:0 auto}
 
 .spark{position:absolute;pointer-events:none;z-index:1;opacity:.9}
@@ -219,12 +195,6 @@ section{padding:100px 0;position:relative;scroll-margin-top:96px}
   box-shadow:0 12px 28px -8px rgba(37,211,102,.55), 0 3px 0 0 rgba(255,255,255,.35) inset;
 }
 .btn-wa:hover{transform:translateY(-3px);background:#20bd5a;box-shadow:0 20px 44px -8px rgba(37,211,102,.6), 0 3px 0 0 rgba(255,255,255,.4) inset}
-
-.btn-ink{
-  background:var(--surface-strong);color:var(--on-strong);
-  box-shadow:0 12px 28px -8px rgba(23,24,41,.4);
-}
-.btn-ink:hover{transform:translateY(-3px);background:#2a2b42}
 
 .btn-outline{
   background:var(--white);
@@ -394,22 +364,6 @@ html[data-theme="dark"] .hero-blob-3{background:radial-gradient(circle, rgba(52,
   display:grid;grid-template-columns:1.05fr 1fr;
   gap:60px;align-items:center;position:relative;z-index:3;
 }
-.hero-copy .hero-kicker{
-  display:inline-flex;align-items:center;gap:10px;
-  background:var(--white);
-  border:1.5px solid var(--border-2);
-  border-radius:var(--r-full);
-  padding:8px 18px 8px 10px;
-  font-size:.8rem;font-weight:700;color:var(--ink-2);
-  margin-bottom:26px;
-  box-shadow:var(--shadow-xs);
-}
-.hero-copy .hero-kicker .kico{
-  width:26px;height:26px;border-radius:50%;
-  background:linear-gradient(135deg,#fbbf24,#f59e0b);
-  display:grid;place-items:center;font-size:.85rem;
-  box-shadow:0 4px 10px -2px rgba(245,158,11,.5);
-}
 .hero-copy h1{
   font-size:clamp(2.4rem,5.6vw,4.5rem);
   font-weight:800;line-height:1.02;
@@ -485,8 +439,6 @@ html[data-theme="dark"] .hero-blob-3{background:radial-gradient(circle, rgba(52,
 }
 .hero-photo-secondary:hover{transform:rotate(0deg) translateY(-6px)}
 .hero-photo-secondary img{width:100%;height:100%;object-fit:cover}
-
-@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 
 .spark-1{top:2%;right:8%}
 .spark-2{bottom:8%;left:2%}
@@ -646,6 +598,10 @@ html[data-theme="dark"] .offer-label{
   position:relative;
   overflow:hidden;
 }
+
+/* Hidden by default — revealed when "Explore Course" is clicked */
+.hustle-section.is-collapsed{display:none}
+
 .hustle-blob{
   top:-20%;right:-10%;width:600px;height:600px;
   background:radial-gradient(circle, rgba(139,92,246,.2), transparent 65%);
@@ -879,73 +835,6 @@ html[data-theme="dark"] .story-list .check{
 }
 
 /* ============================================================
-   PREVIEW
-   ============================================================ */
-.preview-layout{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-.preview-stack{position:relative}
-.preview-cover{
-  border-radius:30px;overflow:hidden;
-  aspect-ratio:4/3;position:relative;
-  border:6px solid var(--white);
-  box-shadow:var(--shadow-xl);
-  transform:rotate(-2deg);
-  transition:transform .6s;
-}
-.preview-cover:hover{transform:rotate(0)}
-.preview-cover img{width:100%;height:100%;object-fit:cover}
-.preview-cover::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(23,24,41,.05) 0%,rgba(23,24,41,.4) 55%,rgba(23,24,41,.9) 100%);
-}
-.preview-badge{
-  position:absolute;top:22px;left:22px;z-index:2;
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:.72rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;
-  padding:8px 15px;border-radius:var(--r-full);
-  background:linear-gradient(135deg,#10b981,#059669);
-  color:#fff;box-shadow:0 8px 20px -6px rgba(16,185,129,.5);
-}
-.preview-title{position:absolute;left:30px;right:30px;bottom:28px;z-index:2;color:#fff}
-.preview-title h3{font-size:1.4rem;font-weight:800;letter-spacing:-.5px;margin-bottom:6px}
-.preview-title small{color:rgba(255,255,255,.8);font-size:.86rem;font-weight:500;line-height:1.5;display:block}
-
-.preview-content h2{
-  font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;
-  letter-spacing:-1.5px;line-height:1.1;margin-bottom:20px;
-}
-.preview-content h2 .serif{font-family:var(--ff-serif);font-style:italic;font-weight:500;color:var(--violet);letter-spacing:-.8px}
-.preview-content > p{color:var(--ink-2);margin-bottom:26px;font-size:1.02rem;line-height:1.7}
-
-.lesson-list{display:flex;flex-direction:column;gap:12px;margin-bottom:10px}
-.lesson{
-  display:flex;align-items:center;gap:16px;
-  background:var(--white);border:1.5px solid var(--border-2);border-radius:16px;
-  padding:15px 20px;transition:all .3s cubic-bezier(.2,.9,.3,1);
-}
-.lesson:hover{border-color:var(--violet);transform:translateX(6px);box-shadow:var(--shadow-sm)}
-.lesson-num{
-  width:40px;height:40px;border-radius:12px;flex-shrink:0;
-  background:linear-gradient(135deg,#e0e7ff,#c7d2fe);
-  color:var(--violet);
-  display:grid;place-items:center;font-size:.85rem;font-weight:800;
-}
-.lesson:nth-child(2) .lesson-num{background:linear-gradient(135deg,#fce7f3,#fbcfe8);color:var(--pink)}
-.lesson:nth-child(3) .lesson-num{background:linear-gradient(135deg,#fef3c7,#fde68a);color:var(--amber-2)}
-.lesson:nth-child(4) .lesson-num{background:linear-gradient(135deg,#d1fae5,#a7f3d0);color:#059669}
-html[data-theme="dark"] .lesson-num{background:linear-gradient(135deg,rgba(99,102,241,.25),rgba(139,92,246,.25));color:var(--violet)}
-html[data-theme="dark"] .lesson:nth-child(2) .lesson-num{background:linear-gradient(135deg,rgba(236,72,153,.25),rgba(244,114,182,.25));color:var(--pink)}
-html[data-theme="dark"] .lesson:nth-child(3) .lesson-num{background:linear-gradient(135deg,rgba(251,191,36,.25),rgba(245,158,11,.25));color:var(--amber)}
-html[data-theme="dark"] .lesson:nth-child(4) .lesson-num{background:linear-gradient(135deg,rgba(16,185,129,.25),rgba(52,211,153,.25));color:var(--mint)}
-.lesson-txt{flex:1}
-.lesson-txt b{display:block;font-size:.92rem;font-weight:700;color:var(--ink)}
-.lesson .arrow{color:var(--ink-3);font-size:.9rem;transition:all .2s;font-weight:700}
-.lesson:hover .arrow{transform:translateX(4px);color:var(--violet)}
-
-@media(max-width:900px){
-  .preview-layout{grid-template-columns:1fr;gap:50px}
-}
-
-/* ============================================================
    FAQ
    ============================================================ */
 .faq-section{background:var(--cream-2);border-radius:60px;margin:20px auto;padding:100px 0;max-width:calc(var(--max) - 40px)}
@@ -980,48 +869,6 @@ html[data-theme="dark"] .faq-ico{background:linear-gradient(135deg,rgba(99,102,2
 @media(max-width:800px){
   .faq-section{border-radius:40px;padding:70px 0;max-width:calc(100% - 24px)}
 }
-
-/* ============================================================
-   CTA BANNER
-   ============================================================ */
-.cta-banner{
-  position:relative;border-radius:40px;
-  padding:80px 60px;overflow:hidden;
-  background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 50%,#ec4899 100%);
-  color:#fff;text-align:center;
-  box-shadow:0 40px 80px -24px rgba(99,102,241,.5);
-}
-.cta-banner::before{
-  content:"";position:absolute;top:-30%;left:-5%;width:45%;height:160%;
-  background:radial-gradient(circle, rgba(255,255,255,.25), transparent 60%);
-  pointer-events:none;
-}
-.cta-banner::after{
-  content:"";position:absolute;bottom:-30%;right:-5%;width:45%;height:160%;
-  background:radial-gradient(circle, rgba(251,191,36,.35), transparent 60%);
-  pointer-events:none;
-}
-.cta-inner{position:relative;z-index:2;max-width:680px;margin:0 auto}
-.cta-inner .cta-emoji{
-  display:inline-grid;place-items:center;
-  width:70px;height:70px;border-radius:20px;
-  background:rgba(255,255,255,.15);
-  backdrop-filter:blur(10px);
-  border:1.5px solid rgba(255,255,255,.25);
-  font-size:2rem;margin-bottom:22px;
-  box-shadow:0 12px 30px -8px rgba(0,0,0,.25);
-}
-.cta-inner h2{
-  font-size:clamp(1.9rem,4vw,2.9rem);font-weight:800;
-  letter-spacing:-1.5px;line-height:1.1;margin-bottom:18px;
-}
-.cta-inner h2 .serif{font-family:var(--ff-serif);font-style:italic;font-weight:500;letter-spacing:-.8px}
-.cta-inner p{color:rgba(255,255,255,.9);font-size:1.08rem;margin-bottom:34px;max-width:540px;margin-left:auto;margin-right:auto}
-.cta-inner .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.cta-inner .btn-primary{background:var(--white);color:var(--ink);box-shadow:0 14px 34px -8px rgba(0,0,0,.25)}
-.cta-inner .btn-primary:hover{background:var(--cream);box-shadow:0 22px 44px -8px rgba(0,0,0,.3)}
-.cta-inner .btn-wa{background:var(--wa);color:#04210e}
-@media(max-width:600px){.cta-banner{padding:56px 26px;border-radius:32px}}
 
 /* ============================================================
    FOOTER
@@ -1118,7 +965,7 @@ footer::before{
 </head>
 <body>
 
-<!-- Theme init — runs before content paints to prevent flash -->
+<!-- Theme init -->
 <script>
   (function(){
     try {
@@ -1147,7 +994,7 @@ footer::before{
       <nav class="nav-links" aria-label="Primary">
         <a href="#top">Home</a>
         <a href="#courses">Course</a>
-        <a href="#side-hustles">What's Included</a>
+        <a href="#side-hustles" data-reveal-course>What's Included</a>
         <a href="#why">Why Choose Us</a>
         <a href="#faqs">FAQs</a>
       </nav>
@@ -1157,7 +1004,7 @@ footer::before{
           <svg width="15" height="15" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           WhatsApp
         </a>
-        <a class="btn btn-primary btn-sm" href="#courses">Explore Course</a>
+        <a class="btn btn-primary btn-sm" href="#side-hustles" data-reveal-course>Explore Course</a>
 
         <button class="theme-toggle" id="themeToggle" type="button"
                 aria-label="Switch to dark mode" aria-pressed="false" title="Toggle dark mode">
@@ -1178,7 +1025,7 @@ footer::before{
     <div class="mobile-menu" id="mobileMenu">
       <a href="#top">Home</a>
       <a href="#courses">Course</a>
-      <a href="#side-hustles">What's Included</a>
+      <a href="#side-hustles" data-reveal-course>What's Included</a>
       <a href="#why">Why Choose Us</a>
       <a href="#journey">How to Access</a>
       <a href="#faqs">FAQs</a>
@@ -1212,11 +1059,6 @@ footer::before{
     <div class="hero-grid">
 
       <div class="hero-copy reveal">
-        <div class="hero-kicker">
-          <span class="kico" aria-hidden="true">✨</span>
-          New course now available
-        </div>
-
         <h1>
           Build New Skills.<br>
           <span class="serif">Discover online income</span> opportunities.
@@ -1235,7 +1077,7 @@ footer::before{
         </div>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#courses">Explore Course →</a>
+          <a class="btn btn-primary" href="#side-hustles" data-reveal-course>Explore Course →</a>
           <a class="btn btn-wa" data-wa-link href="#">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Chat on WhatsApp
@@ -1300,16 +1142,11 @@ footer::before{
 </div>
 
 <!-- ============================================================
-     COURSE + TOP OFFER BLOCK
+     TOP OFFER BLOCK
+     ("🎓 The Course" heading block removed per request)
      ============================================================ -->
 <section id="courses">
   <div class="container">
-    <div class="sec-head reveal">
-      <span class="eyebrow vi">🎓 The Course</span>
-      <h2>Discover Your Next <span class="serif">Digital Opportunity</span></h2>
-      <p>This focused course brings together practical business knowledge, digital entrepreneurship ideas, and strategies for smarter time and money management.</p>
-    </div>
-
     <div class="offer-card reveal" id="offer">
       <span class="offer-label">Golden Opportunity · Special Offer</span>
 
@@ -1342,13 +1179,13 @@ footer::before{
 </section>
 
 <!-- ============================================================
-     WHAT WE PROVIDE
+     WHAT WE PROVIDE — hidden until "Explore Course" clicked
      ============================================================ -->
-<section class="hustle-section" id="side-hustles">
+<section class="hustle-section is-collapsed" id="side-hustles">
   <div class="blob hustle-blob"></div>
 
   <div class="container">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <span class="eyebrow amber">💡 What We Provide</span>
       <h2>Explore What's Included in <span class="serif">This Course</span></h2>
       <p>Discover business ideas, side-hustle concepts, and digital business resources included in this complete course.</p>
@@ -1452,7 +1289,7 @@ footer::before{
           <li><span class="check" aria-hidden="true">✓</span> Evaluate side hustle ideas against your own situation</li>
           <li><span class="check" aria-hidden="true">✓</span> Build smarter habits around time, focus, and money</li>
         </ul>
-        <a class="btn btn-primary" href="#side-hustles">Explore What We Provide →</a>
+        <a class="btn btn-primary" href="#side-hustles" data-reveal-course>Explore What We Provide →</a>
       </div>
     </div>
   </div>
@@ -1490,59 +1327,6 @@ footer::before{
 </section>
 
 <!-- ============================================================
-     PREVIEW
-     ============================================================ -->
-<section id="preview">
-  <div class="container">
-    <div class="preview-layout">
-      <div class="preview-stack reveal">
-        <div class="preview-cover">
-          <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1000&q=80"
-               alt="Laptop, notebook and coffee on a desk — sample preview of the online business course" loading="lazy" width="1000" height="750" />
-          <span class="preview-badge">● Sample Preview</span>
-          <div class="preview-title">
-            <h3>Preview of This Course</h3>
-            <small>Explore the business topics, digital opportunities, and learning resources included in this course.</small>
-          </div>
-        </div>
-      </div>
-
-      <div class="preview-content reveal">
-        <span class="eyebrow vi">🔍 Inside the Course</span>
-        <h2>A Look at What <span class="serif">You'll Be Learning</span></h2>
-        <p>
-          This course is structured into short, focused lessons so you can move through the
-          material without feeling overwhelmed.
-        </p>
-
-        <div class="lesson-list">
-          <div class="lesson">
-            <span class="lesson-num">01</span>
-            <div class="lesson-txt"><b>Understanding Online Business Models</b></div>
-            <span class="arrow" aria-hidden="true">→</span>
-          </div>
-          <div class="lesson">
-            <span class="lesson-num">02</span>
-            <div class="lesson-txt"><b>Evaluating Side Hustle Opportunities</b></div>
-            <span class="arrow" aria-hidden="true">→</span>
-          </div>
-          <div class="lesson">
-            <span class="lesson-num">03</span>
-            <div class="lesson-txt"><b>Time Management &amp; Focus Systems</b></div>
-            <span class="arrow" aria-hidden="true">→</span>
-          </div>
-          <div class="lesson">
-            <span class="lesson-num">04</span>
-            <div class="lesson-txt"><b>Budgeting &amp; Money Fundamentals</b></div>
-            <span class="arrow" aria-hidden="true">→</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
      FAQ
      ============================================================ -->
 <section class="faq-section" id="faqs">
@@ -1554,28 +1338,6 @@ footer::before{
     </div>
 
     <div class="faq-list" id="faqList"></div>
-  </div>
-</section>
-
-<!-- ============================================================
-     CTA BANNER
-     ============================================================ -->
-<section>
-  <div class="container">
-    <div class="cta-banner reveal">
-      <div class="cta-inner">
-        <div class="cta-emoji" aria-hidden="true">🚀</div>
-        <h2>Ready to Start <span class="serif">Learning?</span></h2>
-        <p>Choose your next step, learn at your own pace, and contact us on WhatsApp if you need help before or after purchasing.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="#courses">Explore Course →</a>
-          <a class="btn btn-wa" data-wa-link href="#">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Chat With Us
-          </a>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1646,7 +1408,7 @@ footer::before{
         <ul>
           <li><a href="#top">Home</a></li>
           <li><a href="#courses">Course</a></li>
-          <li><a href="#side-hustles">What's Included</a></li>
+          <li><a href="#side-hustles" data-reveal-course>What's Included</a></li>
           <li><a href="#why">Why Choose Us</a></li>
           <li><a href="#faqs">FAQs</a></li>
         </ul>
@@ -1655,8 +1417,8 @@ footer::before{
       <div class="footer-col">
         <h4>Course</h4>
         <ul>
-          <li><a href="#courses">Explore the Course</a></li>
-          <li><a href="#side-hustles">What's Included</a></li>
+          <li><a href="#side-hustles" data-reveal-course>Explore the Course</a></li>
+          <li><a href="#side-hustles" data-reveal-course>What's Included</a></li>
           <li><a href="#journey">How to Access</a></li>
         </ul>
       </div>
@@ -1699,12 +1461,8 @@ footer::before{
    ⚙️  CONFIG
    ============================================================ */
 const CONFIG = {
-  /* ✅ VERIFIED WhatsApp number in full international format:
-     country code (91) + 10-digit number, no +, no spaces. */
   WHATSAPP_NUMBER: "919452797258",
-
   WHATSAPP_MESSAGE: "Hello, I'm interested in your digital business course. Please share the course details and pricing.",
-
   PAYPAL_URL: "https://www.paypal.com/ncp/payment/C9V26D7LHUXPA",
 
   hustles: [
@@ -1734,7 +1492,7 @@ const CONFIG = {
     { q:"Is this course suitable for beginners?",
       a:"Yes. The course is written with beginners in mind and explains concepts in plain language without assuming prior business experience. If you already have experience, some sections may feel like a refresher." },
     { q:"How do I access the course after purchasing?",
-      a:"After your purchase is confirmed, we share the course access details directly with you on WhatsApp. Full access instructions are provided at that point." },
+      a:"After completing your purchase, you can download the course materials and access them on your device. Follow the provided instructions to download your purchased course and keep the materials for future reference." },
     { q:"What payment methods are available?",
       a:"Payment is completed securely through PayPal on the checkout page. If you run into any trouble with payment, contact us directly on WhatsApp and we'll help you." },
     { q:"Can I contact you before purchasing?",
@@ -1752,7 +1510,7 @@ function waLink(msg){
 }
 
 /* ============================================================
-   THEME TOGGLE (localStorage-aware)
+   THEME TOGGLE
    ============================================================ */
 (function themeToggle(){
   const btn = document.getElementById("themeToggle");
@@ -1791,7 +1549,7 @@ function waLink(msg){
   const wrap = document.getElementById("hustleGrid");
   if(!wrap) return;
   wrap.innerHTML = CONFIG.hustles.map(h => `
-    <article class="hustle-card reveal">
+    <article class="hustle-card">
       <div class="hustle-img">
         <img src="${h.image}" alt="${h.title}" loading="lazy" />
         <div class="hustle-ico" aria-hidden="true">${h.icon}</div>
@@ -1861,7 +1619,51 @@ document.querySelectorAll("[data-wa-link]").forEach(el=>{
 })();
 
 /* ============================================================
-   REVEAL
+   REVEAL COURSE SECTION ON DEMAND
+   "Explore Course" (and any link to #side-hustles) reveals
+   the hidden "What We Provide" section, then smooth-scrolls to it.
+   ============================================================ */
+(function revealCourseOnDemand(){
+  const courseSection = document.getElementById("side-hustles");
+  if (!courseSection) return;
+
+  function revealCourse(){
+    // If it was collapsed, un-hide it
+    if (courseSection.classList.contains("is-collapsed")) {
+      courseSection.classList.remove("is-collapsed");
+      // Force layout so any subsequent scroll calculation is correct
+      void courseSection.offsetHeight;
+      // Make sure every .reveal element inside becomes visible
+      // (the global IntersectionObserver may not have observed it while hidden)
+      courseSection.querySelectorAll(".reveal").forEach(function (el) {
+        el.classList.add("in");
+      });
+    }
+    // Smooth-scroll to the section after a frame so layout has settled
+    requestAnimationFrame(function () {
+      courseSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    // Keep URL in sync without a hard jump
+    try { history.replaceState(null, "", "#side-hustles"); } catch (e) {}
+  }
+
+  // Attach to every link that points to #side-hustles
+  // (Explore Course buttons, What's Included nav links, footer links)
+  document.querySelectorAll('a[href="#side-hustles"]').forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      revealCourse();
+    });
+  });
+
+  // If the page loads with #side-hustles already in the URL, reveal it
+  if (window.location.hash === "#side-hustles") {
+    revealCourse();
+  }
+})();
+
+/* ============================================================
+   REVEAL (scroll-in animation)
    ============================================================ */
 (function revealOnScroll(){
   const items = document.querySelectorAll(".reveal");
