@@ -25,14 +25,16 @@
 <meta property="og:title" content="Make Money Online Course for Beginners | Digital Growth Academy" />
 <meta property="og:description" content="Self-paced digital business course covering online business ideas, side hustles, and digital marketing for beginners in the USA." />
 <meta property="og:url" content="https://ankitvinoriya111-star.github.io/Digigrow/" />
-<meta property="og:image" content="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=80" />
-<meta property="og:image:alt" content="Entrepreneur working on a laptop while learning online business skills" />
+<meta property="og:image" content="https://ankitvinoriya111-star.github.io/Digigrow/digital-growth-hero.jpg" />
+<meta property="og:image:alt" content="Digital Growth Academy — Build Your Digital Future" />
+<meta property="og:image:width" content="1600" />
+<meta property="og:image:height" content="900" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Make Money Online Course for Beginners | Digital Growth Academy" />
 <meta name="twitter:description" content="Self-paced digital business course covering online business ideas, side hustles, and digital marketing for beginners in the USA." />
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=80" />
-<meta name="twitter:image:alt" content="Entrepreneur working on a laptop while learning online business skills" />
+<meta name="twitter:image" content="https://ankitvinoriya111-star.github.io/Digigrow/digital-growth-hero.jpg" />
+<meta name="twitter:image:alt" content="Digital Growth Academy — Build Your Digital Future" />
 
 <!-- ============================================================
      STRUCTURED DATA — Organization & Product
@@ -53,6 +55,9 @@
   "@type": "Product",
   "name": "Digital Business Learning Toolkit",
   "description": "A self-paced digital business course covering online business ideas, side hustles, digital marketing, productivity and money management for beginners.",
+  "image": [
+    "https://ankitvinoriya111-star.github.io/Digigrow/digital-growth-hero.jpg"
+  ],
   "brand": {
     "@type": "Brand",
     "name": "Digital Growth Academy"
@@ -602,6 +607,27 @@ html[data-theme="dark"] .offer-label{
   font-weight:600;
   max-width:540px;margin:0 auto;line-height:1.65;
 }
+.offer-image{
+  margin:0 auto 32px;
+  max-width:760px;
+  width:100%;
+}
+.offer-image img{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  height:auto;
+  display:block;
+  border-radius:var(--r-lg);
+  border:6px solid var(--cream);
+  box-shadow:var(--shadow-lg);
+  transition:transform .4s cubic-bezier(.2,.9,.3,1);
+}
+.offer-image img:hover{transform:translateY(-4px)}
+@media(max-width:600px){
+  .offer-image{max-width:100%;margin-bottom:24px}
+  .offer-image img{border-width:4px;border-radius:var(--r)}
+}
 .offer-section-bottom{padding:0 0 100px}
 
 @media(max-width:600px){
@@ -905,7 +931,7 @@ footer::before{
   pointer-events:none;
 }
 .footer-grid{
-  display:grid;grid-template-columns:1.7fr 1fr 1fr 1.2fr;gap:48px;
+  display:grid;grid-template-columns:1.7fr 1fr 1fr;gap:48px;
   padding-bottom:52px;border-bottom:1px solid rgba(250,246,239,.1);
   position:relative;z-index:2;
 }
@@ -1167,6 +1193,13 @@ footer::before{
 <section id="courses">
   <div class="container">
     <div class="offer-card reveal" id="offer">
+
+      <div class="offer-image">
+        <img src="digital-growth-hero.jpg"
+             alt="Digital Growth Academy — Build Your Digital Future"
+             loading="lazy" width="1600" height="900" />
+      </div>
+
       <span class="offer-label">Golden Opportunity · Special Offer</span>
 
       <h3 class="offer-title">Your Digital Business Learning Toolkit — <span class="serif">One Special Price</span></h3>
@@ -1366,6 +1399,13 @@ footer::before{
 <section class="offer-section-bottom" id="offer-bottom">
   <div class="container">
     <div class="offer-card reveal">
+
+      <div class="offer-image">
+        <img src="digital-growth-hero.jpg"
+             alt="Digital Growth Academy — Build Your Digital Future"
+             loading="lazy" width="1600" height="900" />
+      </div>
+
       <span class="offer-label">Golden Opportunity · Special Offer</span>
 
       <h3 class="offer-title">Your Digital Business Learning Toolkit — <span class="serif">One Special Price</span></h3>
@@ -1442,24 +1482,10 @@ footer::before{
         </ul>
       </div>
 
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="#" data-placeholder="privacy">Privacy Policy</a></li>
-          <li><a href="#" data-placeholder="terms">Terms &amp; Conditions</a></li>
-          <li><a href="#" data-placeholder="refund">Refund Policy</a></li>
-        </ul>
-      </div>
-
     </div>
 
     <div class="footer-bottom">
       <div>© <span id="year"></span> Digital Growth Academy. All rights reserved.</div>
-      <div class="footer-legal">
-        <a href="#" data-placeholder="privacy">Privacy</a>
-        <a href="#" data-placeholder="terms">Terms</a>
-        <a href="#" data-placeholder="refund">Refund Policy</a>
-      </div>
     </div>
 
   </div>
